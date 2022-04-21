@@ -1,0 +1,1 @@
+file = open("focista.txt","r", encoding="utf-8")
