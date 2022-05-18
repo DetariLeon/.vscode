@@ -24,4 +24,9 @@ osszes = 0
 for c in range(len(lista)):
     osszes += int(lista[c][4])
 print(osszes / len(lista), "az átlag.")
-
+#25 óranal kevesebb
+ora = 0
+for d in range(len(lista)):
+    if int(lista[d][3].split(":")[0]) < 25:
+        ora += 1
+print(ora)
