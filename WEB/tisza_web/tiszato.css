@@ -1,0 +1,109 @@
+body{
+    margin: 0px 20px;
+}
+
+h1{
+    position: relative;
+    top: -75px;
+    left: -30px;
+    color: rgb(28, 36, 53);
+    padding: 15px 35px;
+    background-color: white;
+    width:300px;
+    border-radius: 35px;
+    margin-bottom: -75px;
+}
+
+p{
+    text-indent: 25px;
+}
+
+h2{
+    padding: 75px 5px 20px;
+    color: rgb(28, 36, 53);
+    font-weight: bold;
+}
+
+h1, h2, h3, h4 {
+    letter-spacing: 2px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 90%;
+}
+
+th{
+    text-align: center;
+}
+td{
+    font-style: italic;
+    font-size: 90%;
+}
+td:first-child{
+    text-align: right;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.elsotable{
+    margin-top: 75px;
+}
+
+thead{
+    background-color: rgba(28, 36, 53, 0.4);
+}
+
+tbody{
+    background-color: rgba(28, 36, 53, 0.1);
+}
+
+.kozep tr td{
+    text-align: center;
+}
+
+.media p{
+    font-size: 90%;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.madarkep{
+    width: 100px;
+    vertical-align: bottom;
+    /*cursor: pointer;*/
+}
+
+small {
+    white-space: pre;
+}
+
+.media{
+    background-color: rgba(28, 36, 53, 0.1);
+    border: 3px solid rgba(28, 36, 53, 0.4);
+    border-radius: 45px 0px;
+}
+
+.novenykep{
+    font-style: italic;
+    text-align: center;
+}
+
+.novenykep img{
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(28, 36, 53, 0.1);
+    border: 3px solid rgba(28, 36, 53, 0.2);
+    border-radius: 10px;
+}
+
+.keplink{
+    cursor: pointer;
+}
+
+#turizmuskep{
+    width: 80%;
+    height: 80%;
+    margin: 0px auto;  
+}

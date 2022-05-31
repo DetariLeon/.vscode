@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="tiszato.css">
+  <script src="jquery.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="tiszato.js"></script>
+  <title>Tisza-tó</title>
+</head>
+<body>
+
+<div class="container-fluid" id="kepek">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>      
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="kepek/fej1.jpg" alt="Pihenők" title="Pihenők">
+      </div>
+      <div class="carousel-item">
+        <img src="kepek/fej2.jpg" alt="Vizisétány" title="Vizisétány">
+      </div>
+      <div class="carousel-item">
+        <img src="kepek/fej3.jpg" alt="Tavirózsák" title="Tavirózsák">
+      </div>
+    </div>      
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  <h1 class="d-none d-md-block">A Tisza-tó</h1>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#foldrajz">Földrajz</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#turizmus">Turizmus</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#novenyvilag">Növényvilág</a>
+    </li> 
+    <li class="nav-item">
+      <a class="nav-link" href="#allatvilag">Állatvilág</a>
+    </li>    
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-8">
+      <h2 class="display-5" id="foldrajz">A Tisza-tó földrajza</h2>
+      <p>Az Alföld északi részén, Heves megye délkeleti szélén, Borsod-Abaúj-Zemplén, Heves megye és Jász-Nagykun-Szolnok megye határán fekszik. Területén mozaikosan váltakoznak a nyílt vízfelületek, szigetek, holtágak, sekély csatornák. Hossza 27 km, átlagos mélysége 1,3 méter, legmélyebb pontján 17 méter. 43 km<sup>2</sup>-nyi sziget található benne.</p>
+      <p>1973-ban építették fel a Kiskörei Erőművet a duzzasztógáttal a tiszai áradások szabályozása és az Alföld jobb vízellátása végett. Feltöltése az 1990-es években fejeződött be. A tónak mára kialakult az ökológiája, madárrezervátum is működik benne. 1999 óta a Hortobágyi Nemzeti Park bemutató területeként az <abbr title="Egyesült Nemzetek Nevelésügyi, Tudományos és Kulturális Szervezete">UNESCO</abbr><a href ="https://hu.wikipedia.org/wiki/Magyarország_világörökségi_helyszínei" target="_blank"> Világörökség</a> része.</p>
+    </div>
+    <div class="col-lg-4">
+      <table class="table table-hover elsotable">
+        <thead>
+          <tr>
+            <th colspan="2">A Tisza-tó számokban</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tengerszint feletti magasság</td>
+            <td>83 méter</td>
+          </tr>
+          <tr>
+            <td>Hosszúság</td>
+            <td>27 km</td>
+          </tr>
+          <tr>
+            <td>Felszíni terület</td>
+            <td>127 km <sup>2</sup> </td>
+          </tr>
+          <tr>
+            <td>Átlagos mélység</td>
+            <td>1,3 méter</td>
+          </tr>
+          <tr>
+            <td>Legnagyobb mélység</td>
+            <td>17 méter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <h2 class="display-5" id="turizmus">A Tisza-tó turisztikai vonzereje</h2>
+  <div class="row">    
+    <div class="col-lg-3">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Turisztikai célpontok</th>
+          </tr>
+        </thead>
+        <tbody class="kozep keplink">
+          <tr>
+            <td onmouseleave="keprejt();" onclick="turizmus('okocentrum');">Tisza-tavi Ökocentrum</td>
+          </tr>
+          <tr>
+            <td onmouseleave="keprejt();" onclick="turizmus('skanzen');">Miniskanzen</td>
+          </tr>
+          <tr>
+            <td onmouseleave="keprejt();" onclick="turizmus('madarrezervatum');">Madárrezervátum</td>
+          </tr>
+          <tr>
+            <td onmouseleave="keprejt();" onclick="turizmus('termalfurdo');">Termálfürdő</td>
+          </tr>
+          <tr>
+            <td onmouseleave="keprejt();" onclick="turizmus('lovastanya');">Lovas-tanya</td>
+          </tr>
+          <tr>
+            <td onmouseleave="keprejt();" onclick="turizmus('strand');">Szabad-strand</td>
+          </tr>
+          <tr>
+            <td onmouseleave="keprejt();" onclick="turizmus('fazekas');">Fazekasmesterek</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>    
+    <div class="col-lg-9">      
+      <div id="turizmusszovegkeret">
+        <p>A tó feltöltése után magyar turisták kezdték látogatni a tavat, mert sokkal olcsóbb volt a Balatonnál. A tó környékén megkezdődött a falusi turizmus, a tó körül kempingek, szállodák, strandok épültek. A part mentén hat szabadstrand, Tiszafüreden pedig termálfürdők kínálnak fürdési lehetőséget. Abádszalók környékén a vízi sportok széles skálája gyakorolható, beleértve motoros vízi sportokat is. A horgászat a szabályok betartása mellett engedélyezett.</p>
+        <p class="text-primary">A Tisza-tó vadvízi világa gyalog, kerékpárral, lóháton és csónakkal is bejárható. A Tisza-tavi madárrezervátum védett terület, csak vezetővel látogatható.</p>
+        <p>2012-ben nyílt meg Poroszlón a Tisza-tavi Ökocentrum, mely interaktív módon mutatja be a Tisza-tó és a Tisza-völgy természeti értékeit és élővilágát. A látogatóközpont 2600 m<sup>2</sup>-es főépülete többek között kiállításoknak, rendezvényeknek ad otthont, de kilátó is található itt. A 735 000 liter össztérfogatú akváriumrendszer a legnagyobb édesvízű akvárium Európában. A főépületet 7 hektáros szabadidőpark veszi körül állatbemutatókkal és játszóterekkel; skanzenje a 19. századi életmódot mutatja be. Az ökocentrum kikötőjéből vízitúrák és kishajós kirándulások indulnak.</p>
+      </div>
+      <div id="turizmuskepkeret">
+        <img id="turizmuskep">
+      </div>
+    </div>    
+  </div>
+  
+  
+  <div class="row">
+    <h2 class="display-5" id="novenyvilag">A Tisza-tó növényvilága</h2> 
+    <p>A Tisza-tó változatos élőhelyeinek, mozaikosságának köszönhetően igen gazdag élővilág alakult ki. Területén 14 féle növénytársulást tartanak számon, melyek közül a legjellemzőbbek a vízi növénytársulások, a mocsártársulások és az erdőtársulások. A hínártársulások nagy területeket borítanak be a tározó területén. Legjellemzőbb tagja a védett sulyomhínár, aminek előretörése háttérbe szorítja az értékes fehér tündérrózsa állományait. Látványos tagjai a vízi társulásoknak még a sárga virágú vízitök és a tündérfátyol. A rovarfogásra módosult közönséges rence apró, szelepekkel nyitható hólyagokkal ejti csapdába az apró vízi gerincteleneket. A víz alatti hínártársulások fontos tagja a süllőhínár. A mocsaras részeket a nád és a gyékény dominanciája jellemzi. Ezekben a társulásokban megtalálható még a tavi káka, virágkáka, de jelentős növényei közé tartoznak például az ágas békabuzogány, éles sás, réti füzény, vízi peszérce, vízi menta, vízmelléki csukóka, gyilkos csomorika és ebszőlő csucsor. Utóbbi két növényre fokozottan figyeljünk, hiszem mind a két faj halálosan mérgező. Az uralkodó erdőtársulás a puhafa ligeterdő, más néven a fűz-nyár ligeterdő is, amely a társulást alkotó fajokról, vagyis a fehér fűzről, a fehér, szürke és fekete nyárról kapta a nevét. Sajnos nagy számban vannak jelen az úgynevezett invazív fajok, mint például a gyalogakác, zöld juhar vagy az amerikai kőris. Az ártéri erdők aljnövényzete szegényes, de vízállásos években megjelenhetnek bennük a mocsártársulásokra jellemző fajok, többek között például a nyári tőzike, mocsári nőszirom, széleslevelű békakorsó…stb. Hatalmas függönyöket képesek viszont alkotni a különböző szőlőfajok (parti szőlő, ligeti szőlő, vadszőlő).</p>
+    <div class="col-lg-6 py-3 novenykep">
+      <img src="kepek/tozike.jpg" alt="Nyári tőzike" title="Nyári tőzike">
+      <p>Nyári tőzike</p>
+    </div>
+    <div class="col-lg-6 py-3 novenykep">
+      <img src="kepek/tunderrozsa.jpg" alt="Fehér tündérrózsa" title="Fehér tündérrózsa">
+      <p>Fehér tündérrózsa</p>
+    </div>    
+  </div>
+
+
+  <h2 class="display-5" id="allatvilag">A Tisza-tó állatvilága</h2>
+  <p>A Tisza-tavi Vízi Sétányon és Tanösvényen számos, a Tisza-tóra jellemző faj megfigyelhető, csupán nyitott szemmel és füllel kell járni és türelmesnek kell lenni. A pallók mentén haladva érdemes csendben közlekedni, hiszen például az egyszerű, barna színezetű nádi énekesmadarak könnyen észrevétlenek tudnak maradni, viszont gyönyörű hangjukkal felhívják magukra a figyelmet. A Hortobágyi Nemzeti Park gyűjtése alapján a Magyar Madártani Egyesület madárhatározójából egy válogatás:</p>
+  <div class="row">
+
+    <div class="col-lg-6 py-3">
+      <div class="media border p-3 h-100">
+        <img src="kepek/bakcso.png" alt="Bakcsó" title="Bakcsó" class="mr-3 mt-3 madarkep">
+        <div class="media-body">
+          <h4>Bakcsó <small><i>(Nycticorax nycticorax)</i></small></h4>
+          <p>A mondókából mindenki által ismerős vakvarjúról kevesen tudják, hogy ez a név tulajdonképpen a bakcsót takarja.  Az egyik leggyakoribb hazai gémféle. Nagy telepei alakulhatnak ki, ezek közelében a kedvezőtlen változások miatt lokálisan sok pár költése meghiúsulhat. Szerencsére mára a nagy gémtelepek többsége védett területen található, ezekről pedig a természetvédelem megfelelően gondoskodik. Vonuló madár, március-április táján érkezik vissza afrikai telelőterületeiről. Az őszi vonulás szeptemberben kezdődik, de az időjárás függvényében el is húzódhat.</p>
+         </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 py-3">
+     <div class="media border p-3 h-100">
+       <img src="kepek/guvat.png" alt="Guvat" title="Guvat" class="mr-3 mt-3 madarkep">
+       <div class="media-body">
+         <h4>Guvat <small><i>(Rallus aquaticus)</i></small></h4>
+         <p>Vizes élőhelyek jellegzetes madara, bár jelenlétét legtöbbször csak malacvisításszerű hangja árulja el, ha meg is pillantjuk, legtöbbször csak néhány másodpercig sikerül megfigyelni mielőtt elbújik a sűrű növényzetben. Egész állományát veszélyeztető tényező nem ismert. A vizes élőhelyek általános védelme a faj megmaradását biztosítja. Részben vonuló, az északi madarak télre Dél-Európába és Észak-Afrikába is eljutnak. Egyre több példány telel át Magyarországon.</p>
+        </div>
+     </div>
+   </div>
+
+   <div class="col-lg-6 py-3">
+    <div class="media border p-3 h-100">
+      <img src="kepek/jegmadar.png" alt="Jégmadár" title="Jégmadár" class="mr-3 mt-3 madarkep">
+      <div class="media-body">
+        <h4>Jégmadár <small><i>(Alcedo atthis)</i></small></h4>
+        <p>Hazánk egyik legszínpompásabb madara, mely folyók és tavak mentén található partfalakban költ. Állandó madarunk, mely télen a be nem fagyó folyóknál vészeli át a zord hónapokat. Sokszor lehet látni, amint a víz felett szitál, azaz kolibriszerűen egyhelyben „lebeg”. Erre a költőhely kialakításánál éppúgy szüksége van, mint a vadászata során. Gyakran látni víz fölé behajló ágakon, melyekről mozdulatlanul lesi a víz tetején úszó apró halakat. Nyugat-Európában állománya csökkenő tendenciát mutat, Európa többi részén azonban stabil populációkat találunk.</p>
+       </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-6 py-3">
+    <div class="media border p-3 h-100">
+      <img src="kepek/karokatona.png" alt="Kárókatona" title="Kárókatona" class="mr-3 mt-3 madarkep">
+      <div class="media-body">
+        <h4>Kárókatona <small><i>(Phalacrocorax carbo)</i></small></h4>
+        <p>Kormorán néven is sokak által ismert, viszonylag gyakori, korábban jelentős hazai állománynövekedésen átesett faj. Ősszel az itthoni populáció egyedei mellé északabbról érkeznek csapatok. A vizek befagyásával a madarak jelentős része déli irányba vonul, a be nem fagyó vizeken azonban sok példány áttelel. Egyike a hazai madárfauna azon tagjainak, amely jelentős károkat okozhat a halastavakon gazdálkodóknak. Halastavainkon, természetes vizeinken károkozásának mérséklése a fent linkelt jogszabály szerint lehetséges, de figyelembe kell venni az adott területen élő egyéb madárfajok jelenlétét, védelmét.</p>
+       </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-6 py-3">
+    <div class="media border p-3 h-100">
+      <img src="kepek/nadirigo.png" alt="Nádirigó" title="Nádirigó" class="mr-3 mt-3 madarkep">
+      <div class="media-body">
+        <h4>Nádirgó <small><i>(Acrocephalus arundinaceus)</i></small></h4>
+        <p>A legnagyobb testű, országszerte gyakori nádiposzátánk. Méreténél fogva a számára megfelelő költőhelyekért csak fajtársaival kell versengenie, a többi rokon faj kisebb mérete miatt nem száll harcba vele a fészkelőterületekért. A fészekparazita kakukk egyik leggyakoribb gazdamadara a nádas területeken. Vonuló, afrikai telelőhelyeiről általában áprilisban érkezik vissza, szeptemberben pedig már el is indul déli irányba.</p>
+       </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-6 py-3">
+    <div class="media border p-3 h-100">
+      <img src="kepek/tengelic.png" alt="Tengelic" title="Tengelic" class="mr-3 mt-3 madarkep">
+      <div class="media-body">
+        <h4>Tengelic <small><i>(Carduelis carduelis)</i></small></h4>
+        <p>Egyik legszínesebb és leggyakoribb pintyfélénk. Szinte kizárólag csapatosan látni. A hideg idő beálltával gyakran találkozhatunk vele a madáretetőkön. Apró gyommagvakkal táplálkozik, de fiókái étrendjét bogarakkal és hernyókkal egészíti ki. Nagyrészt állandó, de télen észak-déli irányú kóborlása is megfigyelhető. Régebben dekoratív külseje miatt kalitkamadárnak tartották, de már régóta védett faj.</p>
+       </div>
+    </div>
+  </div>  
+  </div>
+</div>
+</body>
+</html>
+
+<!-- https://hu.wikipedia.org/wiki/Magyarország_világörökségi_helyszínei -->
