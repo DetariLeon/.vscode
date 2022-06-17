@@ -1,4 +1,4 @@
-#2. feladat
+#2. Szökőévek
 from xmlrpc.client import boolean
 print("2. feladat: Szökőév listázó")
 evtolev= [] # Az összes év a kettő között

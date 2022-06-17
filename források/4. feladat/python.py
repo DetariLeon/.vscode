@@ -1,5 +1,4 @@
 #1. Kisebb-nagyobb meghatározása
-#1. feladat
 print("1. feladat: Kisebb-nagyobb meghatározása")
 a = int(input("Kérem az élső számot: "))
 b = int(input("Kérem a második számot: "))
