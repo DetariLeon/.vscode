@@ -17,15 +17,6 @@ while a > -1:
     lista.append(a)
 print(lista)
 
-def paratlan(szamok)->int:
-    lk=szamok[0]
-    for i in szamok:
-        if i < lk and i%2 == 0:
-            lk = i
-    return i
-
-
-
 
 b = min(lista)
 if b%2:

@@ -1,4 +1,4 @@
-from tkinter import N
+
 
 
 file = open("agazatigyak/jarmu.txt",'r')

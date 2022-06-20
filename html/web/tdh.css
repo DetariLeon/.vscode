@@ -1,0 +1,82 @@
+body{
+    margin: 0px 20px;
+    color: navy;
+    background-image: url('kepek/hatter1.png');
+}
+
+h2{
+    font-weight: bold;
+    padding: 65px 0px 10px;
+}
+
+p{
+    text-indent: 25px;
+}
+
+li p{
+    text-indent: 0px;
+    padding: 0px;
+    margin: 10px 15px;
+}
+
+.kiskep  {
+    max-width: 95%;
+    padding: 0px;
+    margin: 15px 5px 0px;
+    border: 3px solid navy;
+}
+
+.kepfelirat{
+    font-size: 75%;
+    font-style: italic;
+    padding: 0px;
+    margin: 0px 5px 10px;
+    text-align: center;
+}
+
+ol {
+    margin: 15px 0px;
+}
+
+ol li {
+    margin: 20px;
+}
+
+ol li p{
+    border-left: 3px solid navy;
+    padding: 0px 5px;
+    margin: 0px;
+}
+
+ol.szakasz li:before {
+    content: 'szakasz: ';
+    counter-increment: item;
+    margin-left: -20px;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-bottom: 2px solid red;
+    padding-top: 50px;
+}
+
+ol.helyezes li:before {
+    content: 'hely: ';
+    counter-increment: item;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+input[type=range]{
+    margin: 10px;
+}
+
+.row{
+    border-radius: 50px;
+    margin: 20px;
+    background-image: url(fatyol.png);
+}
+
+q{
+    font-style: italic;
+}
