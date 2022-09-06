@@ -1,0 +1,26 @@
+header {    
+    height: 200px;
+    background-image: url(cim.png);
+    background-position: center center;
+
+
+}
+body{
+    background-color:#8CC4D9 ;
+}
+
+h1 {
+    text-shadow: 3px 3px 3px black;
+    
+}
+
+border {
+    margin-right: 10px;
+}
+h2{
+    border-bottom: dotted black 2px;
+}
+footer a,footer a:hover,footer a:visited, footer a:active{
+    color:green;
+    text-decoration: underline;
+}
