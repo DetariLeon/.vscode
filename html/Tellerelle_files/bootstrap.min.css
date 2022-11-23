@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang='hu'>
+
+<head>
+
+    <meta charset='iso-8859-2'>
+    <title>Szakképzés: szoftverfejlesző, informatikai rendszerüzemeltető technikus - OKJ képzések - tantervek és követelmények</title>
+    <meta name='keywords'    content='technikum, szakgimnázium, felnőttképzés, felnőttoktatás, OKJ, továbbtanulás, szakma, informatika, szoftverfejlesző, informatikai rendszerüzemeltető, technikus, technikusképzés'>
+    <meta name='description' content='Szakképzés: szoftverfejlesző, informatikai rendszerüzemeltető technikus - OKJ képzések - tantervek és követelmények'>
+    <meta name='author'      content='Kovács László Bálint'>
+
+    <link href='/pencil01.ico' rel='shortcut icon'>
+
+    <link href='/infojegyzet.css' type='text/css' rel='stylesheet'>
+
+    <script src='/jquery-3.6.0.js'></script>
+
+</head>
+
+
+
+
+
+
+
+<script>
+
+    function sport_mozgat()
+    {
+	scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0 
+	sporttarskereso.style.top  = (scrollTop + 100 + parseInt(sporttarskereso.style.top )) /2 +"px" 
+	if(parseInt(sporttarskereso.style.top )<100) sporttarskereso.style.top=100 +"px"
+    }
+
+</script>
+
+
+<body onLoad=' sporttarskereso.style.top=100+"px" ;  setInterval("sport_mozgat()",50) ' >
+
+    <div id='sporttarskereso'>
+	<a href='http://sporttarskereso.hu/' target='_blank'><img src='http://sporttarskereso.hu/img/logo_kek_transparent.png' width=32 height=32 title='Ne kockulj, mozdulj!'></a>
+    </div>
+	<div id='reklam'>
+
+
+		<div>
+
+
+<script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<!-- infojegyzet_oldalso_160x600 -->
+<ins class='adsbygoogle'
+     style='display:inline-block;width:160px;height:600px'
+     data-ad-client='ca-pub-8902248392818003'
+     data-ad-slot='2099031723'></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+		</div>
+
+	</div>
+
+
+
+    <div id='toolbox'>
+
+	<div id='toolboxcim'>Eszköztár</div>
+
+	<a href='/webszerkesztes/html/szerszamoslada/' title='Szerszámosláda
+webszerkesztéshez' ><img src='/webszerkesztes/html/szerszamoslada/toolbox.jpg'></a>
+	<a href='/internet/google/'                    title='Google
+trükkök'                   ><img src='/internet/google/google-logo-hat-and-wank.png'  ></a>
+	<a href='/webszerkesztes/html/urlapok/'        title='Űrlap-elemek'                        ><img src='/webszerkesztes/html/urlapok/form_icon.jpg'     ></a>
+	<a href='/webszerkesztes/osszefoglalo/'        title='HTML & CSS
+összefoglaló'          ><img src='/webszerkesztes/osszefoglalo/summary.jpg'       ></a>
+
+    </div>
+
+
+
+<div id='spiral'>
+
+  <div id='morzsa'><span style='float:right;'><a href='/vizsgafeladatok/gyakvizsga/'><img src='/arrowpagingleft.png'  border=0 title='előző' style='opacity: 0.6;'></a> <span style='position:relative; top:-4px;'><a href='/oldalterkep/' title='Tartalomjegyzék'>345<a></span> <a href='/szakkepzes/szoftverfejleszto/'><img src='/arrowpagingright.png' border=0 title='következő' style='opacity: 0.6;'></a></span><a href='/'>Kezdőlap</a> - Szakmai tantervek és követelmények</div>
+
+  <div style='display:none;'><a href='http://ujdomainek.hu' target=_blank>ujdomainek.hu</a></div>
+
+
+
+
+<script>
+
+
+    document.body.onkeydown = function(e)
+    {
+
+//	alert(  String.fromCharCode(e.keyCode)  )
+
+	if( e.keyCode==109 && document.activeElement.localName=='body')  location.href='/vizsgafeladatok/gyakvizsga/'   // numpad: - jel
+	if( e.keyCode==107 && document.activeElement.localName=='body')  location.href='/szakkepzes/szoftverfejleszto/'   // numpad: + jel
+
+    }
+
+
+</script>
+
+
+
+
+
+  <img src='dosszie.jpg' height=150 align=left>
+  <h1>Szakképzés</h1>
+  <h2>Programtantervek és követelmények</h2>
+  <h2>2022/'23. tanév</h2>
+
+
+  <style>
+
+	ul li       { list-style-type : disc   ;}
+	ul li ul li { list-style-type : circle ;}
+
+
+	table#regi-uj 
+	{
+		margin            : 12px 36px    ;
+	}
+
+	table#regi-uj tr td
+	{
+		padding           :  4px 24px    ;
+		border-radius     :  6px         ;
+	}
+
+	table#regi-uj tr td:first-child
+	{
+		background-color  : #FCC         ;
+	}
+
+	table#regi-uj tr td:last-child
+	{
+		background-color  : #BFB         ;
+	}
+
+
+	szak
+	{
+		display     : inline-block ;
+		width       : 360px        ;
+	}
+
+	.ptt ,  .kkk
+	{
+		display     : inline-block ;
+		width       : 48px         ;
+		font-weight : bold         ;
+	}
+
+  </style>
+
+
+  <div id='tartalom' style='margin: 64px 0 0 48px;'>
+
+
+    <b>Új elnevezések 2020. július 1-től:</b>
+
+	<table id=regi-uj cellspacing=12>
+	    <tr>
+		<td>Országos Képzési<br>Jegyzék (OKJ) </td> <td><img src=nyil.png height=24 valign=middle> <td><a href='https://www.nive.hu/index.php?option=com_content&view=article&id=1097' target=_blank>Szakmajegyzék</a></td>
+	    </tr>
+	    <tr>
+		<td>szakgimnázium</td>  <td><img src=nyil.png height=24 valign=middle> </td> <td>technikum</td>
+	    </tr>
+	    <tr>
+		<td>kerettanterv</td>   <td><img src=nyil.png height=24 valign=middle> <td><a href='https://szakkepzes.ikk.hu/kkk-ptt' target=_blank>programtanterv (PTT)</a></td>
+	    </tr>
+	    <tr>
+		<td>szakmai és vizsga-<br>követelmény (SzVK) </td> <td><img src=nyil.png height=24 valign=middle> <td><a href='https://szakkepzes.ikk.hu/kkk-ptt' target=_blank>képzési és kimeneti<br>követelmény (KKK)</a></td>
+	    </tr>
+	</table>
+	<br>
+
+
+    <b>Informatikai szakmák új vizsgakövetelményei:</b> 
+
+
+
+    <style>
+
+	#spiral fieldset.ez-is-erdekelheti
+	{
+	    border : solid 1px #004 ;
+	}
+
+	#spiral fieldset.ez-is-erdekelheti:hover
+	{
+	    border : solid 1px #00A ;
+	}
+
+	#spiral fieldset.ez-is-erdekelheti legend
+	{
+	    color : #004 ;
+	}
+
+	#spiral fieldset.ez-is-erdekelheti legend:hover
+	{
+	    color : #00A ;
+	}
+
+	#spiral fieldset.ez-is-erdekelheti a
+	{
+	    color : #004 ;
+	}
+
+	#spiral fieldset.ez-is-erdekelheti a:hover
+	{
+	    color : #00A ;
+	}
+
+    </style>
+
+
+
+    <fieldset style='margin:24px; border-radius:8px;' class='ez-is-erdekelheti'>
+    <legend style='margin:0 16px; padding:0 8px;'> Részletes leírás </legend>
+	<a href='./szoftverfejleszto/'>
+	    <img src='./szoftverfejleszto/developer.png' height=75 align=left>
+	    <h1 style='margin:12px 0;'>Szoftverfejlesztő</h1>
+	    <h2>vizsgakövetelmények</h2>
+	</a>
+    </fieldset>
+
+
+    <fieldset style='margin:24px; border-radius:8px;' class='ez-is-erdekelheti'>
+    <legend style='margin:0 16px; padding:0 8px;'> Részletes leírás </legend>
+	<a href='./rendszeruzemelteto/'>
+	    <img src='./rendszeruzemelteto/network.jpg' height=75 align=left>
+	    <h1 style='margin:12px 0;'>Rendszerüzemeltető</h1>
+	    <h2>vizsgakövetelmények</h2>
+	</a>
+    </fieldset>
+    <br>
+
+
+
+
+
+    <b>Jogszabályok:</b> 
+
+	<img src='./cimer.png' height=106 align=right>
+	<ul>
+
+		<li><a href='https://njt.hu/jogszabaly/2019-80-00-00'      target=_blank ><b>2019. évi LXXX. törvény a szakképzésről</b></a>
+
+		<li><a href='https://www.njt.hu/jogszabaly/2020-12-20-22'  target=_blank ><b>12/2020. (II. 7.) Korm. rendelet a szakképzésről szóló törvény végrehajtásáról</b></a>
+
+	</ul>
+	<br>
+
+
+    <b>További források:</b> 
+
+<!--	<a href='KozismOraterv_NAT_2020_szakgimn.png' target=_blank><img src='KozismOraterv_NAT_2020_szakgimn.png' align=right width=240></a> -->
+	<ul>
+
+		<li><a href='https://www.oktatas.hu/kozneveles/kerettantervek/2020_nat/kerettanterv_szakkepzes/szakgimnaziumok_9_12'  target=_blank ><b>Közismereti kerettantervek (NAT-2020)</b></a>
+<!--		<ul>
+		    <li><a href='https://www.oktatas.hu/pub_bin/dload/kozoktatas/kerettanterv/szakkepzes/Bevezetes.docx'              target=_blank >Bevezetés: heti óraszámok [DOC]</a>
+		</ul> -->
+		<li><a href='https://www.oktatas.hu/kozneveles/kerettantervek/2012_nat'                                               target=_blank ><b>Közismereti kerettantervek (NAT-2012-'16)</b></a>
+
+	<br><br>
+
+		<a href='https://szakkepzes.ikk.hu/kkk-ptt'  target=_blank><img src='./ikk.png' height=36 align=right border=0></a>
+		<li><a href='https://szakkepzes.ikk.hu/kkk-ptt'  target=_blank title=''                                  >szakkepzes.ikk.hu - <b>Szakképzési dokumentumok - 2020.</b>  </a>
+		<ul>
+		    <li><a href='https://api.ikk.hu/v1/media/740'                                                     target=_blank title='PDF' >szakkepzes.ikk.hu - <b>Közismereti óraszámok - 2020.</b> </a> &nbsp; &nbsp;  
+		        <a href='https://api.ikk.hu/storage/uploads/files/heti_oraterv_mintaxlsx-1589387987645.xlsx'  target=_blank title='heti_oraterv_minta.xlsx'> [Excel formátum]                     </a>
+<!--		    <li><a href='https://api.ikk.hu/storage/uploads/files/heti_oraterv_minta_1pdf-1589389074614.pdf'  target=_blank title='PDF' >szakkepzes.ikk.hu - <b>Közismereti óraszámok - 2020.</b> </a>  -->
+		</ul>
+
+	<br>
+		<img src='./bkik.jpg' height=72 align=right>
+		<li><a href='./2021/alapvizsga.pdf'    target=_blank title='szerkesztette: Budapesti Kereskedelmi és Iparkamara'><b>Ágazati alapvizsga "kisokos"</b> (BKIK) </a>
+		<li><a href='./2021/szakmaivizsga.pdf' target=_blank title='szerkesztette: Budapesti Kereskedelmi és Iparkamara'><b>Szakmai vizsgák szervezése</b>   (BKIK) </a>
+
+	<br><br>
+
+		<li><a href='https://www.nive.hu/index.php?option=com_content&view=article&id=933&Itemid=166'         target=_blank title='30/2016. (VIII. 31.) NGM rendelet' >nive.hu <b>Szakképzési kerettantervek - 2018.</b>            </a>
+		<li><a href='https://www.nive.hu/index.php?option=com_content&view=article&id=731&Itemid=166'         target=_blank title='30/2016. (VIII. 31.) NGM rendelet' >nive.hu <b>Szakképzési kerettantervek - 2016.</b>            </a>
+		<li><a href='https://www.nive.hu/index.php?option=com_content&view=article&id=440&Itemid=166'         target=_blank title='14/2013. (IV.   05.) NGM rendelet' >nive.hu <b>Szakképzési kerettantervek - 2013.</b>            </a>
+	<br><br>
+		<li><a href='https://www.nive.hu/index.php?option=com_jumi&view=application&fileid=16&tip=szvk_2012_' target=_blank                                           >nive.hu <b>Szakmai és vigzsakövetelmények </b> (2013, 2016)  </a>
+		<li><a href='https://www.nive.hu/index.php?option=com_jumi&view=application&fileid=19'                target=_blank                                           >nive.hu <b>Írásbeli mintafeladatok        </b> (2016)        </a>
+		<li><a href='https://www.nive.hu/index.php?option=com_content&view=article&id=449&Itemid=166'         target=_blank                                           >nive.hu <b>Szóbeli vizsgafeladatok        </b> (2013, 2016)  </a>
+	</ul>
+
+
+
+
+
+    <h3>9-11. évfolyam - technikum:</h3>
+
+	<ul>
+		<li><szak>Szoftverfejlesztő és -tesztelő                             </szak><a href='https://api.ikk.hu/v1/media/731' target=_blank title='programtanterv' class='ptt'>PTT</a><a href='https://api.ikk.hu/v1/media/457' target=_blank title='képzési és kimeneti követelmény' class='kkk'>KKK</a>
+		<li><szak>Informatikai rendszer- és alkalmazás-üzemeltető technikus  </szak><a href='https://api.ikk.hu/v1/media/730' target=_blank title='programtanterv' class='ptt'>PTT</a><a href='https://api.ikk.hu/v1/media/456' target=_blank title='képzési és kimeneti követelmény' class='kkk'>KKK</a>
+	</ul>
+
+
+
+    <h3>12. évfolyam - szakgimnázium (kifutó képzés):</h3>
+
+	<ul>
+		<li><a href='http://kerettanterv.ofi.hu/20160825_szakgimnazium.doc'                                                                                                                                               target=_blank >Szakgimnáziumi közismereti kerettanterv - 2016.          </a>
+
+		<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakkepzesi_kerettantervek_2018/DL.php?f=073_54_481_06_Informatikai_rendszeruzemelteto.docx'                                                  target=_blank >Informatikai rendszerüzemeltető kerettanterv - 2018.     </a>
+	</ul>
+
+
+<!--
+    <h3>12. évfolyam (2020/'21) - szakgimnázium (kifutó képzés):</h3>
+-->
+	<ul>
+<!--
+		<li><a href='http://kerettanterv.ofi.hu/20160825_szakgimnazium.doc'                                                                                                                                               target=_blank >Szakgimnáziumi közismereti kerettanterv - 2016.          </a>
+
+		<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakkepzesi_kerettantervek_2016/DL.php?f=Informatikai_rendszeruzemelteto_54_481_06.docx'                                                      target=_blank >Informatikai rendszerüzemeltető kerettanterv - 2016.     </a>
+-->
+		<li><a href='https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok_vizsgatargyankent'                                                                                                                          target=_blank >Szakmai érettségi: Korábbi évek feladatai                </a>
+
+		<li><a href='https://www.nive.hu/index.php?option=com_content&view=article&id=1030&Itemid=166'                                                                                                                    target=_blank >Szakmai érettségi: Mintafeladat 2020-ra (középszint)     </a>
+		<li><a href='https://www.nive.hu/index.php?option=com_content&view=article&id=1029&Itemid=166'                                                                                                                    target=_blank >Szakmai érettségi: Mintafeladat 2020-ra (emelt szint)    </a>
+
+		<li>Szoftverlista - 2020. tavasz:
+
+		<ul>
+			<li><a href='http://dload.oktatas.educatio.hu/erettsegi/nyilvanos_anyagok_2020tavasz/agazati_szakmai/informatikai_agazati_emelt_kh_kozep_szoftverlista_2020maj.pdf' target=_blank >Ágazati informatika - közép- és emelt szint </a>
+			<li><a href='http://dload.oktatas.educatio.hu/erettsegi/nyilvanos_anyagok_2020tavasz/info_kh_kozep_szoftverlista_2020maj.pdf'                                       target=_blank >Közismereti informatika - középszint        </a>
+			<li><a href='http://dload.oktatas.educatio.hu/erettsegi/nyilvanos_anyagok_2020tavasz/info_emelt_szoftverlista_2020maj.pdf'                                          target=_blank >Közismereti informatika - emelt szint       </a>
+		</ul>
+
+	</ul>
+
+
+<!--
+    <h3>12. évfolyam (2018/'19) - korábbi szakközépiskola:</h3>
+
+	<ul>
+		<li><a href='http://kerettanterv.ofi.hu/06_melleklet_9-12_szki/6.1_bevezetes_9-12_sz.doc'                                                                                                                         target=_blank >Szakgimnáziumi közismereti kerettanterv - 2012.          </a>
+
+		<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakkepzesi_kerettantervek_2013/DL.php?f=Informatikai_rendszergazda_54_481_04.docx'                                                           target=_blank >Informatikai rendszergazda kerettanterv - 2013.          </a>
+
+		<ul>
+				<li><a href='https://www.oktatas.hu/kozneveles/erettsegi/altalanos_tajekoztatas/vizsgatargyak_2017tol#2'                                                                                          target=_blank >Szakmai érettségi: Vizsgakövetelmények és vizsgaleírás  </a>
+				<li><a href='https://www.nive.hu/index.php?option=com_content&view=article&id=738&Itemid=166'                                                                                                     target=_blank >Szakmai érettségi: Mintafeladat                         </a>
+		</ul>
+	</ul>
+
+
+
+    <h3>11. évfolyam - szakképzés:</h3>
+
+	<ul>
+		<li><a href='http://kerettanterv.ofi.hu/20160825_szakkozepiskola.docx'                                                                                                                                            target=_blank >Szakközépiskolai közismereti kerettanterv - 2016.        </a>
+
+		<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakkepzesi_kerettantervek_2016/DL.php?f=Szamitogep_szerelo_karbantarto_34_523_02.docx'                                                       target=_blank >Számítógép-szerelő, karbantartó kerettanterv             </a>
+		<ul>
+			<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakmai_es_vizsgakovetelmenyek/2016/DL.php?f=34_523_02_Szamitogep_szerelo_karbantarto_2016.pdf&tip=szvk_2012_&evszam=2016'            target=_blank >SzVK                                                     </a>
+			<li><a href='https://www.nive.hu/Downloads/vizsga/komplex_szakmai_vizsga_szobeli_vizsgafeladatai/DL.php?f=3452302_Szamitogepszerelo_karbantarto_20170209.pdf'                                             target=_blank >Szóbeli tételek                                          </a>
+		</ul>
+	</ul>
+-->
+
+
+
+    <h3>13. évfolyam - szakgimnázium (kifutó képzés):</h3>
+
+
+<style>
+
+    table.vizsgatevekenyseg
+    {
+	margin           :  12px 6px 12px 6px  ;
+    }
+
+    table.vizsgatevekenyseg td
+    {
+	border-radius    :   2px              ;
+	box-shadow       :   1px 1px 1px #66A ;
+	padding          :   4px 12px         ;
+	background-color :   #CCE             ;
+    }
+
+    table.vizsgatevekenyseg tr td.elso
+    {
+	background-color : #BBD    ;
+	font-weight      : bold    ;
+    }
+
+</style>
+
+
+
+	<ul>
+<!--
+		<li><a href='https://www.nive.hu/index.php?option=com_content&view=article&id=1095:informaciok-a-20192020-tanev-majusi-juniusi-komplex-szakmai-vizsgak-megszervezesehez&catid=10:hirek&Itemid=166'                target=_blank ><b>Információk a 2019/2020. tanév májusi-júniusi komplex szakmai vizsgák megszervezéséhez </b></a>
+		<br><br>
+-->
+
+		<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakkepzesi_kerettantervek_2016/DL.php?f=Szoftverfejleszto_54_213_05.docx'                                                                    target=_blank >Szoftverfejlesztő kerettanterv     </a>
+		<ul>
+				<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakmai_es_vizsgakovetelmenyek/2016/DL.php?f=54_213_05_Szoftverfejleszto_2016.pdf&tip=szvk_2012_&evszam=2016'                 target=_blank >SzVK                               </a>
+				<li>Vizsgatevékenységek:
+
+
+				<table class='vizsgatevekenyseg' cellspacing=4>
+
+				    <tr valign=top>
+					<td class='elso'>Írásbeli</td>
+					<td><a href='/vizsgafeladatok/'>Programozás és adatbázis-kezelés számítógépes környezetben a megismert szoftverfejlesztő eszközök felhasználásával</a></td>
+					<td>120&nbsp;perc</td>
+					<td>20%</td>
+				    </tr>
+
+				    <tr valign=top>
+					<td class='elso' rowspan=3>Gyakorlati</td>
+					<td><a href='/vizsgafeladatok/gyakvizsga/'>Komplex alkalmazás készítése</a></td>
+					<td>180&nbsp;perc</td>
+					<td>20%</td>
+				    </tr>
+				    <tr valign=top>
+					<td><a href='/vizsgafeladatok/gyakvizsga/'>Webalkalmazás készítése</a></td>
+					<td>120&nbsp;perc</td>
+					<td>10%</td>
+				    </tr>
+				    <tr valign=top>
+					<td>Záródolgozat bemutatása és megvédése<br>
+					    <a href='/webszerkesztes/zarodolgozat/'                                                                          > - témák, szempontok, ötletek</a><br>
+					    <a href='/webszerkesztes/dokumentacio/'                                                                          > - dokumentáció formai és tartalmi követelményei</a><br>
+					    <a href='http://wm-iskola.hu/sites/all/files/prints/szoftveruzemelteto_zaro_formakovetelmeny.pdf'  target=_blank > - általános formai elvárások</a><br>
+					    <a href='./szakdoga_bir_lap/biral21.pdf'                                                           target=_blank > - bírálati lap</a></td>
+					<td>&nbsp;&nbsp;15&nbsp;perc</td>
+					<td>30%</td>
+				    </tr>
+
+				    <tr valign=top>
+					<td class='elso' rowspan=2>Szóbeli</td>
+					<td><a href='https://www.nive.hu/Downloads/vizsga/komplex_szakmai_vizsga_szobeli_vizsgafeladatai/DL.php?f=5421305_A_Szoftverfejleszto_20170308.pdf'  target=_blank >Szoftverfejlesztés és webfejlesztés</a></td>
+					<td>&nbsp;</td>
+					<td>10%</td>
+				    </tr>
+				    <tr valign=top>
+					<td><a href='https://www.nive.hu/Downloads/vizsga/komplex_szakmai_vizsga_szobeli_vizsgafeladatai/DL.php?f=5421305_B_Szoftverfejleszto_20170308.pdf'  target=_blank >Informatikai szakmai angol nyelvismeret</a></td>
+					<td>&nbsp;</td>
+					<td>10%</td>
+				    </tr>
+
+				</table>
+
+		</ul>
+	<br>
+
+		<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakkepzesi_kerettantervek_2016/DL.php?f=Informatikai_rendszeruzemelteto_54_481_06.docx'                                                      target=_blank >Informatikai rendszerüzemeltető kerettanterv</a>
+		<ul>
+				<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakmai_es_vizsgakovetelmenyek/2016/DL.php?f=54_481_06_Informatikai_rendszeruzemelteto_2016.pdf&tip=szvk_2012_&evszam=2016'   target=_blank >SzVK                               </a>
+				<li>Vizsgatevékenységek:
+
+
+				<table class='vizsgatevekenyseg' cellspacing=4>
+
+				    <tr valign=top>
+					<td class='elso' rowspan=2>Írásbeli</td>
+					<td>Hálózati ismeretek</td>
+					<td>&nbsp;&nbsp;45&nbsp;perc</td>
+					<td>&nbsp;&nbsp;5%</td>
+				    </tr>
+				    <tr valign=top>
+					<td><a href='/vizsgafeladatok/'>Programozás és adatbázis-kezelés számítógépes környezetben a megismert szoftver eszközök felhasználásával</a></td>
+					<td>120&nbsp;perc</td>
+					<td>10%</td>
+				    </tr>
+
+				    <tr valign=top>
+					<td class='elso' rowspan=4>Gyakorlati</td>
+					<td>Hálózatok konfigurálása I.</td>
+					<td>&nbsp;&nbsp;90&nbsp;perc</td>
+					<td>15%</td>
+				    </tr>
+				    <tr valign=top>
+					<td> Hálózatok konfigurálása II.</td>
+					<td>&nbsp;&nbsp;90&nbsp;perc</td>
+					<td>15%</td>
+				    </tr>
+				    <tr valign=top>
+					<td>Hálózati operációs rendszerek és felhőszolgáltatások</td>
+					<td>180&nbsp;perc</td>
+					<td>30%</td>
+				    </tr>
+				    <tr valign=top>
+					<td>Komplex hálózati szolgáltatási környezet kiépítése</td>
+					<td>&nbsp;&nbsp;60&nbsp;perc</td>
+					<td>&nbsp;&nbsp;5%</td>
+				    </tr>
+
+				    <tr valign=top>
+					<td class='elso' rowspan=2>Szóbeli</td>
+					<td><a href='https://www.nive.hu/Downloads/vizsga/komplex_szakmai_vizsga_szobeli_vizsgafeladatai/DL.php?f=5448106_A_Informatikai%20rendszeruzemelteto_20170308.pdf'  target=_blank >Információtechnológiai alapok</a></td>
+					<td>&nbsp;</td>
+					<td>10%</td>
+				    </tr>
+				    <tr valign=top>
+					<td><a href='https://www.nive.hu/Downloads/vizsga/komplex_szakmai_vizsga_szobeli_vizsgafeladatai/DL.php?f=5448106_B_Informatikai%20rendszeruzemelteto_20170308.pdf'  target=_blank >Informatikai szakmai angol nyelvismeret</a></td>
+					<td>&nbsp;</td>
+					<td>10%</td>
+				    </tr>
+
+				</table>
+
+		</ul>
+	<br>
+
+
+<!--
+		<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakkepzesi_kerettantervek_2016/DL.php?f=Gazdasagi_informatikus_54_481_02.docx'                                                               target=_blank >Gazdasági informatikus kerettanterv</a>
+		<ul>
+				<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakmai_es_vizsgakovetelmenyek/2016/DL.php?f=54_481_02_Gazdasagi_informatikus_2016.pdf&tip=szvk_2012_&evszam=2016'            target=_blank >SzVK                               </a>
+				<li><a href='https://www.nive.hu/Downloads/vizsga/komplex_szakmai_vizsga_szobeli_vizsgafeladatai/DL.php?f=5448102_Gazdasagi_informatikus_20170209.pdf'                                            target=_blank >Szóbeli tételek                    </a>
+		</ul>
+	<br>
+
+		<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakkepzesi_kerettantervek_2016/DL.php?f=Cad_cam_informatikus_54_481_01.docx'                                                                 target=_blank >CAD-CAM informatikus kerettanterv  </a>
+		<ul>
+				<li><a href='https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Szakmai_es_vizsgakovetelmenyek/2016/DL.php?f=54_481_01_CAD_CAM_informatikus_2016.pdf&tip=szvk_2012_&evszam=2016'              target=_blank >SzVK                               </a>
+				<li><a href='https://www.nive.hu/Downloads/vizsga/komplex_szakmai_vizsga_szobeli_vizsgafeladatai/DL.php?f=5448101_CAD-CAM_informatikus_20170209.pdf'                                              target=_blank >Szóbeli tételek                    </a>
+		</ul>
+-->
+
+
+	</ul>
+
+
+
+  </div>
+
+
+  
+
+	    <style>
+
+		table#lentilapozo
+		{
+			margin-top       : 48px   ;
+			margin-bottom    : 48px   ;
+		}
+
+		table#lentilapozo:hover
+		{
+			background-color : #DDD   ;
+		}
+
+		table#lentilapozo tr td img
+		{
+			vertical-align   : bottom ;
+			margin-bottom    : -1px   ;
+		}
+
+		table#lentilapozo tr td a
+		{
+			color            : #999   ;
+		}
+
+		table#lentilapozo tr td a:hover
+		{
+			color            : #444   ;
+		}
+
+	    </style>
+
+
+	    <table id='lentilapozo' width=100%'>
+		<tr>
+			<td width=33% align=left   ><a href='/vizsgafeladatok/gyakvizsga/'><img src='/arrowpagingleft.png'  border=0 title='előző' style='opacity: 0.6;'> előző oldal</a></td>
+			<td width=34% align=center ><a href='/randomoldal.php'>random oldal</a></td>
+			<td width=33% align=right  ><a href='/szakkepzes/szoftverfejleszto/'>következő oldal <img src='/arrowpagingright.png' border=0 title='következő' style='opacity: 0.6;'></a></td>
+		</tr>
+	    </table>
+
+	
+
+
+<style>
+
+    hr.hirdetes , hr.hirdetes_vege
+    {
+	padding: 0;
+	border: none;
+	border-top: 1px solid #888;
+	color: #888;
+	text-align: center;
+    }
+
+    hr.hirdetes:after
+    {
+	content: 'hirdetés';
+	display: inline-block;
+	position: relative;
+	top: -9px;
+	font-size: 11px;
+	padding: 0 4px;
+	background: white;
+    }
+
+</style>
+
+
+
+	    <hr width=680 style='margin-top: 0px; margin-bottom: 24px;' class='hirdetes'>
+
+<!--
+		<div style='text-align:center; margin-bottom:32px;'>
+
+
+<a href='https://www.donably.com/sos-ukrajna-adomanygyujtes' target='_blank'><img src='https://www.donably.com/public/cms/headerphoto-ogimage/7/2/0000000172.png' width=580 title='Ljasuk Dimitry vagyok. Magyar anya, ukrán apa fia...' border=0></a>
+
+
+		</div>
+-->
+
+<script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<!-- infojegyzet_belso -->
+<ins class='adsbygoogle'
+     style='display:block'
+     data-ad-client='ca-pub-8902248392818003'
+     data-ad-slot='8671059378'
+     data-ad-format='auto'
+     data-full-width-responsive='true'></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+	    <hr width=680 style='margin-top: 24px; margin-bottom: 64px;' class='hirdetes_vege'>
+
+
+
+
+
+	    <div id='hozzaszolas' style=' 
+
+			margin:32px ;
+			padding:32px;
+			background-color:#CCE;
+			border-top: 2px solid #88B; 
+			border-bottom: 2px solid #88B; 
+			border-radius: 4px;
+
+			font-family : verdana;
+			color: #224 ;
+
+	    '>
+
+		<a name='hsz'></a>
+
+		
+				<b>Eddig 1 hozzászólás van a témához:</b> <br><br>
+	            
+
+		<div class='hsz_szoveg' style=' margin-bottom:8px; padding:12px; border-radius:8px; background-color:white; text-align:justify; overflow:auto;'>
+			<span style=' display:inline-block; width:100%; font-weight:bold; margin-bottom:12px; border-bottom: 1px dotted #448; '>
+			    <span style=' float:right; '>2022-03-23 08:35</span>
+			    <a href='/profil/?u=SPSOELnw90' style='color:#224;'>Fehér László Péter</a>
+			</span>
+			Tisztelt Oldaltulajdonos!<br>
+<br>
+Az oldal fantasztikus feladatok szempontjából, jelenleg én PHP-t tanítok, Szeretném az OKJ-s programozási feladatokat saját webhelyemen is megoldással együtt közzé tenni. PHP nyelven lenne a megoldás. Ehhez kérem a támogatásukat, természetesen forrás megjelőléssel, és a PHP -s forrás elérhető lenne az önök számára is. <br>
+<br>
+Köszönettel Fehér László Péter<br>
+feherlaszlopeter.eu<br>
+<br>
+ <br><br>
+		</div>
+
+	    
+
+		<br><hr color='#444488' size=1><br>
+
+
+		<form name='hsz_form' action='/hozzaszolas_ir.php' method='post' target='ijablak'>
+
+		  <table cellspacing=6>
+
+		    <tr>
+		      <td colspan=2>
+			Új hozzászólás: <br>
+			<textarea name='hszoveg' style='width:540px; height:160px;'></textarea>
+		      </td>
+		    </tr>
+
+		    <tr valign=middle>
+		      <td>
+			E-mail cím: <br>
+			<input type='email' name='umail' style='width:270px' onblur=' ijablak.location.href = "/hsz_mail_nev_keres.php?q=" + this.value '>
+		      </td>
+		      <td>
+			<p style='font-size:10px; text-align:justify'><br>Erre a címre küldjük ki a hozzászólás jóvá- hagyásához szükséges linket. Az e-mail címet sehol nem tesszük közzé.</p> 
+		      </td>
+		    </tr>
+
+		    <tr valign=middle>
+		      <td>
+			Név: <br>
+			<input type='text'  name='unev'  style='width:270px'>
+		      </td>
+		      <td>
+			<p style='font-size:10px; text-align:justify'><br>Ez a név fog megjelenni az Ön hozzászólásai mellett.</p>
+		      </td>
+		    </tr>
+
+		    <tr valign=middle>
+		      <td>
+			Mennyi tizennyolc + öt?<br>
+			Számjegyekkel írja be! <br>
+			<input type='text'  name='uszamosszeg'  style='width:270px'>
+		      </td>
+		      <td>
+			<p style='font-size:10px; text-align:justify'><br><br>Ez a robotok beírása elleni védelem miatt szükséges ellenőrzés.</p>
+		      </td>
+		    </tr>
+
+		    <tr valign=middle>
+		      <td align=right>
+			<br>
+			<input type='hidden' name='url' value='/szakkepzes/' >
+			<input type='submit'            value='Elküldés'              >
+		      </td>
+		      <td>
+		      </td>
+		    </tr>
+
+		  </table>
+
+		</form>
+
+
+	    </div>
+
+	
+
+
+
+
+
+<div id='lablec'>
+
+	<a href='http://infojegyzet.hu/profil/'><img src='/envelope.gif' align=right border=0 title='Üzenet az Adminnak'></a>
+	&copy; infojegyzet.hu, 2018. szeptember	<img src='/update.png' style=' position:relative; top:2px;' title='Utoljára módosítva: 2022.09.02'>
+
+</div>
+
+
+<iframe name='ijablak' id='ijablak' width=0 height=0 frameborder=0>
+Oldalletöltések száma: 1996Mai látogatók száma: 881</iframe>
+
+
+
+</div >
+
+
+</body>
+
+
+</html>
+
+
