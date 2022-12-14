@@ -1,0 +1,9 @@
+body{
+    background-image: url('mbappe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aqua;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
