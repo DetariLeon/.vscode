@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="formelements.js"></script>
+    <title>Automárkák</title>
+</head>
+
+<body>
+
+    <form onsubmit="return(valasz())">
+        <label for="markak">Autók:</label>
+        <select id="markak" name="markak">
+            <option value="ford">Ford</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Porsche">Porsche</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="valasz"></p>
+
+    <form onsubmit="return valaszt()">
+        <label for="evszak">Évszakok:</label><br>
+        <input type="radio" id="nyar" name="evszak" value="nyar" >
+        <label for="nyar">Nyár</label><br>
+        <input type="radio" id="osz" name="evszak" value="osz">
+        <label for="osz">Ősz</label><br>
+        <input type="radio" id="tel" name="evszak" value="tel">
+        <label for="tel">Tél</label><br>
+        <input type="radio" id="tavasz" name="evszak" value="tavasz">
+        <label for="tavasz">Tavasz</label><br>
+        <input type="submit" value="Submit">
+      </form>
+      <p id="valaszt"></p>
+</body>
+
+</html>
