@@ -1,0 +1,116 @@
+@import url(http://fonts.googleapis.com/css?family=Petit+Formal+Script|Nosifer&subset=latin,latin-ext);
+
+body{
+    color: #000000;
+    font-family: tahoma, sans-serif;
+    background-color: #fff2e8;
+}
+
+.kep{
+    border: 2px;
+    border-color: red;
+    border-style: dotted;
+    float: right;
+}
+
+/* men� hivatkoz�sok st�luselemei */
+
+#menu a,
+#menu a:link,
+#menu a:visited{
+    color: yellow;
+    text-decoration: none;
+}
+#menu a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+/* t�bl�zat st�luselemek */
+
+table{
+    border-collapse: collapse;
+    margin: 5px auto;
+    background-color: #e4dccf;
+}
+th, td{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px dotted white;
+    
+}
+td.kiemelt{
+    padding-left: 30px;
+    color: red;
+    font-weight: bold;
+}
+
+/* �rlap st�luselemek */
+
+#ajanlat_form p{
+    font-weight: bold;
+    margin-left: 20px;
+}
+#ajanlat_form input[type='text']{
+    width: 300px;
+}
+#ajanlat_form input.meret{
+    width: 70px;
+}
+
+/* szerkezeti st�luselemek */
+
+#fejlec{
+    font-family: 'Nosifer', cursive;
+    background: url('fejlec_bg.jpg') repeat;
+    height: 120px;
+    width: 960px;
+    padding: 0;
+    margin: 0 auto;
+
+} 
+#fejlec h1{
+    font-size: 24px;
+    margin: 0;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    height: 45px;
+}
+#menu{
+    height: 35px;
+}
+#menu ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#menu li{
+    display: inline;
+    margin: 0 40px;
+    font-size: 18px;
+}
+#tartalom{
+    width: 940px;
+    min-height: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: white;
+}
+#lablec{
+    height: 40px;
+    width: 960px;
+    margin: 0 auto;
+    background: url('fejlec_bg.jpg') repeat;
+    
+}
+#lablec p{
+    color: #ccc;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}

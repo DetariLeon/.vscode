@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>White Valley sípálya</title>
+</head>
+
+    <div id="header">
+        <h1>White Valley sípálya</h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">Kezdőoldal</a></li>
+            <li class="aktiv"><a href="ido.html">Időjárás</a></li>
+            <li><a href="inf.html">Járatinformáció</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        <div class="article">
+            <h2>Időjárás</h2>
+            <p><img src="skier.jpg" width="160" height="231">White Valley-ben decembertől egészen márciusig kiváló a hó. Márciustól októberig változékonyabb az idő, ilyenkor számos fakultatív programra is lehetőség nyílik.</p>
+            <p>Januárban a snowboard verseny a világ minden tájáról vonzza a látogatókat. Az éjszakai élet és az állandó programok változatos vakációt biztosítanak. Jelentkezzen időben, nehogy lemaradjon!</p>
+        </div>
+        <div class="aside">
+            <h2>Információ</h2>
+            <table>
+                <caption>Átlagos havi középhőmérsékletek</caption>
+                <tr>
+                    <th>Hónap</th>
+                    <th>Hőmérséklet(°C)</td>
+                </tr>
+                <tr>
+                    <td>november</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <td>december</td>
+                    <td>-6</td>
+                </tr>
+                <tr>
+                    <td>január</td>
+                    <td>-5</td>
+                </tr>
+                <tr>
+                    <td>február</td>
+                    <td>-5</td>
+                </tr>
+                <tr>
+                    <td>március</td>
+                    <td>-2</td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+    <div id="footer">
+        <small>Elérhetőségeink: Telefon: (06-99) 999-9999</small>
+    </div>
+
+</html>

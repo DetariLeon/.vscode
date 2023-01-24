@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+<title>Kovács és Fiai Kft.</title>
+</head>
+<body>
+    <div id="fejlec">
+        <h1>Kovács &amp; Fiai Szobafestő és mázoló Kft.</h1>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="referenciak.html">Referenciák</a></li>
+                <li><a href="arak.html">Árak</a></li>
+                <li><a href="ajanlat.html">Ajánlatkérés</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="tartalom">
+        <h2>Ajánlatkérés</h2>
+        <div id="ajanlat_form">
+            <form>
+                <fieldset>
+                    <legend>Ajánlatkéréshez töltse ki az alábbi űrlapot</legend>
+                    <p>Név:<br>
+                        <input type="text" name="nev" value=""></p>
+                    <p>Email cím:<br>
+                        <input type="text" name="email" value=""></p>
+                    <p>Munka:<br>
+                         <input type="radio" name="munka" value="festes" id="festes"><label for="festes">Festés</label><br>
+                         <input type="radio" name="munka" value="mazolas" id="mazolas"><label for="mazolas">Mázolás</label><br>
+                         <input type="radio" name="munka" value="tapetazas" id="tapetazas"><label for="tapetazas">Tapétázás</label><br>
+                         <input type="radio" name="munka" value="gletteles" id="gletteles"><label for="gletteles">Glettelés</label><br>
+                         <input type="radio" name="munka" value="csiszolas" id="csiszolas"><label for="csiszolas">Csiszolás</label><br>
+                         <input type="radio" name="munka" value="egyeb" id="egyeb"><label for="egyeb">Egyéb</label></p>
+                    <p>Falfelület mérete:<br>
+                        <input type="text" name="meret" value="" class="meret"></p>
+                    <p>Egyéb megjegyzéseit ide írja.<br>
+                        <textarea name="megjegyzes" rows="5" cols="40" ></textarea></p>
+                    <p><input type="submit" name="ok" value="Ajánlat küldése"></p>    
+                </fieldset>
+            </form>
+        </div>
+        
+        
+    </div>
+    <div id="lablec">
+        <p>&copy;Minden jog fenntartva.</p>
+    </div>
+</body>
+</html>
