@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="styles.css">
-<title>White Valley sípálya</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>White Valley sípálya</title>
 </head>
+
 <body>
     <div id="header">
         <h1>White Valley sípálya</h1>
@@ -21,14 +23,14 @@
         <div class="article">
             <h2>Járatinformáció</h2>
             <p><img src="skier.jpg" width="160" height="231"></p>
-
-            <table>
+            <table id="indulo">
+                <caption>Induló járatok</caption>
                 <thead>
                     <tr>
-                        <td>Hová</td>
-                        <td>Indulás</td>
-                        <td>Megjegyzés</td>
-                    </tr>                    
+                        <th>Hová</th>
+                        <th>Indulás</th>
+                        <th>Megjegyzés</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
@@ -122,6 +124,11 @@
                         <td>Hétköznapokon</td>
                     </tr>
                     <tr>
+                        <td>Oslo</td>
+                        <td>18.15</td>
+                        <td>Minden nap</td>
+                    </tr>
+                    <tr>
                         <td>Budapest</td>
                         <td>18.45</td>
                         <td>Minden nap</td>
@@ -148,14 +155,15 @@
                     </tr>
                 </tbody>
             </table>
-
-            <table>
+            
+            <table id="erkezo">
+                <caption>Érkező járatok</caption>
                 <thead>
                     <tr>
                         <td>Honnan</td>
                         <td>Érkezés</td>
                         <td>Megjegyzés</td>
-                    </tr>                    
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
@@ -218,9 +226,9 @@
                         <td>14.00</td>
                         <td>Hétköznapokon</td>
                     </tr>
-                        <td>Stockholm</td>
-                        <td>14.30</td>
-                        <td>Minden nap</td>
+                    <td>Stockholm</td>
+                    <td>14.30</td>
+                    <td>Minden nap</td>
                     </tr>
                     <tr>
                         <td>Rome</td>
@@ -275,7 +283,7 @@
                     <tr>
                         <td>Stockholm</td>
                         <td>21.00</td>
-                        <td>Hétköznapokon</td>
+                        <td>Hétvégén</td>
                     </tr>
                 </tbody>
             </table>
@@ -285,4 +293,5 @@
         <small>Elérhetőségeink: Telefon: (06-99) 999-9999</small>
     </div>
 </body>
+
 </html>
