@@ -50,7 +50,7 @@ public class Orai0131 {
         }
     }
 
-    public static void MatrixOsszege(int[][] matrixTomb) {
+    public static int MatrixOsszege(int[][] matrixTomb) {
         System.out.println("-----A mátrix elemeinek összege-----");
         int i, j;
         int osszeg = 0;
@@ -59,7 +59,7 @@ public class Orai0131 {
                 osszeg = osszeg + matrixTomb[i][j];
             }
         }
-        System.out.println(osszeg);
+        return osszeg;
     }
 
     public static boolean ParosMatrix(int[][] matrixTomb) {
@@ -88,7 +88,7 @@ public class Orai0131 {
         int[][] szamok = new int [4][5] ;
         RandomMatrix(szamok);
         ReverseMatrix(szamok);
-        MatrixOsszege(szamok);
+        System.out.println(MatrixOsszege(szamok));
         System.out.println(ParosMatrix(szamok));
         
         MatrixDuplazasa(szamok);
