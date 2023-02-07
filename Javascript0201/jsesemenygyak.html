@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esemeny gyakorlás</title>
+
+</head>
+
+<body>
+    <form action="">
+        Felhasználónév: <input type="text" id="felhnev">
+        Jelszó: <input type="password" id="jelszo">
+        <div class="error" id="jelszohiba" style="color:red ; display: none">Legalább 8 karakter és 3 szám
+        </div>
+    </form>
+    <script>
+        var jelszo = document.getElementById("jelszo");
+        var jelszohiba = document.getElementById("jelszohiba");
+        jelszo.addEventListener("focus", function () {
+            jelszohiba.style.display = "block";
+        });
+        jelszo.addEventListener("blur", function () {
+            jelszohiba.style.display = "none";
+        });
+        function changeMessageColor() {
+            const colorSelect = document.querySelector("#color-select");
+            const selectedColor = colorSelect.value;
+
+            document.querySelector(".password-requirements").style.color = selectedColor;
+        }
+    </script>
+</body>
+
+</html>
