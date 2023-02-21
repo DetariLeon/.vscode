@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p id="date"></p>
+    <p id="demo"></p>
+    <p id="Time"></p>
+    <p id="nap"></p>
+    <p id="Napok"></p>
+
+
+
+    <script>
+        var dt = "2023-01-12-T12:22:33";
+        document.getElementById("date").innerHTML = dt;
+        const d = new Date("2021-03-25");
+        document.getElementById("demo").innerHTML = d.toISOString();
+        document.getElementById("Time").innerHTML = d.getTime();
+        document.getElementById("nap").innerHTML = d.getDay();
+
+        const napok = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"]
+        let nap = (napok[d.getDay()])
+        document.getElementById("Napok").innerHTML = napok[d.getDay()];
+
+
+
+    </script>
+</body>
+
+</html>

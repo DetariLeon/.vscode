@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form>
+        <label for="nev">Esemény neve:</label><br>
+        <input type="form-label" id="nev"><br>
+        <label for="kezdes">Esemény kező napja:</label><br>
+        <input type="date" id="kezdes"><br>
+        <label for="befejezes">Esemény befejezés nap:</label><br>
+        <input type="date" id="befejezes"><br><br>
+
+        <input type="button" onclick="esemeny()" value="Submit">
+    </form>
+
+    <p id="pesemeny"></p>
+
+
+    <script>
+        function esemeny() {
+            var nev = document.getElementById("nev").value
+
+            var kezdes = document.getElementById("kezdes").value
+            var startdate = new Date(kezdes);
+            var befejezes = document.getElementById("befejezes").value
+            var endate = new Date(befejezes);
+
+            if (startdate > endate) {
+                document.getElementById("pesemeny").innerHTML = ("Az esemény befejező napja nem lehet a mai napnál korábban")
+            } else {
+                document.getElementById("pesemeny").innerHTML = ("Jó dátum")
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>
