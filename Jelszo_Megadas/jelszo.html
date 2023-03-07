@@ -11,35 +11,74 @@
 </head>
 
 <body>
-    <h2 style="font-family:'Courier New', Courier, monospace">Jelszó megadása</h2>
+
     <div class="container">
+
         <div class="row justify-content-center">
-            <div class="col-6">
-                <form>
-                    <div class="form-group">
-                        <label>Jelszó</label>
-                        <div class="input-group" id="show_hide_password">
-                            <input class="form-control" type="password">
-                            <div class="input-group-addon">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <form>
-                    <div class="form-group">
-                        <label>Jelszó megerősítése:</label>
-                        <div class="input-group" id="show_hide_password">
-                            <input class="form-control" type="password">
-                            <div class="input-group-addon">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <br>
-                <button type="submit" class="btn btn-primary">Küldés</button>
-            </div>
+            <h2>Jelszó megadása</h2>
+            <form>
+                <div class="form-group">
+                    <label for="password-input">Jelszó:</label>
+                    <input type="password" class="form-control" id="password-input" placeholer="Jelszó" onkeyup="validatePass()">
+                    <p id="validatePassResult" style="font-size: small; color:brown"></p>
+                </div>
+
+            </form>
         </div>
+
+        <form>
+            <div class="form-group">
+                <label for="password-input">Jelszó megerősítése:</label>
+                <input type="password" class="form-control" id="password-input" placeholer="Jelszó">
+
+            </div>
+
+        </form>
+        <br>
+        <button type="submit" class="btn btn-primary" onclick="urese()">Küldés</button>
     </div>
+    </div>
+    </div>
+    <script>
+        function urese() {
+            let passwd =
+                String(document.getElementById('password-input').value)
+            if (passwd == "") {
+                alert("Nem lehet üres")
+            }
+
+        }
+
+        function validatePass() {
+            let pont = 0
+            let passwd = String(document.getElementById('password-input').value)
+
+            if (/[a-z]/.test(passwd)) {
+                pont++;
+            }
+            if (/[A-Z]/.test(passwd)) {
+                pont++;
+            }
+            if (/[0-9]/.test(passwd)) {
+                pont++;
+            }
+            if (/[#@!&]/.test(passwd)) {
+                pont++;
+            }
+            document.getElementById('validatePassResult').innerHTML = pont
+            if (pont <= 1) {
+                document.getElementById('validatePassResult').innerHTML = "gyenge"
+            } else if (pont == 2 || pont == 3) {
+                document.getElementById('validatePassResult').innerHTML = "közpes"
+            } else if (pont == 4) {
+                document.getElementById('validatePassResult').innerHTML = "erős"
+
+            } else {
+                document.getElementById('validatePassResult').innerHTML = "gyenge"
+            }
+        }
+    </script>
+
 </body>
 
 </html>

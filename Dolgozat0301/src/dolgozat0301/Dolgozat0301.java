@@ -66,27 +66,26 @@ public class Dolgozat0301 {
     }
 
     public static void primszamHelye(int[][] matrixTomb) {
-        int i, j, oszto = 2,oszlop,sor;
+        int i, j, oszto = 2, oszlop, sor;
 
         for (i = 0; i < matrixTomb.length; i++) {
             for (j = 0; j < matrixTomb[i].length; j++) {
                 if (matrixTomb[i][j] % oszto != 0 && oszto < matrixTomb[i][j]) {
-                    sor = matrixTomb[i+1][j];
+                    sor = matrixTomb[i + 1][j];
                 }
             }
-            
+
         }
     }
 
-    
-
     public static void main(String[] args) {
-        int[][] szamok = new int[1][  1];
+        int[][] szamok = new int[4][4];
         matrix(szamok);
         writeMatrix(szamok);
         Kulonbseg(szamok);
         System.out.println(Primszam(szamok) ? "Van prímszám" : "Nincs prímszám");
-        primszamHelye(szamok);
+        //primszamHelye(szamok);
+        
     }
 
 }
