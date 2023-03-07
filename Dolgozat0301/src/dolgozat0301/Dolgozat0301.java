@@ -52,6 +52,15 @@ public class Dolgozat0301 {
         }
     }
 
+    public static boolean isPrime(int number) {
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static boolean Primszam(int[][] matrixTomb) {
         int i, j, oszto = 2;
 
@@ -65,17 +74,31 @@ public class Dolgozat0301 {
         return false;
     }
 
-    public static void primszamHelye(int[][] matrixTomb) {
-        int i, j, oszto = 2, oszlop, sor;
+    public static boolean vanePrim(int[][] matrixTomb) {
+        for (int i = 0; i < matrixTomb.length; i++) {
+            for (int j = 0; j < matrixTomb[i].length; j++) {
+                if (isPrime(matrixTomb[i][j])) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
-        for (i = 0; i < matrixTomb.length; i++) {
-            for (j = 0; j < matrixTomb[i].length; j++) {
-                if (matrixTomb[i][j] % oszto != 0 && oszto < matrixTomb[i][j]) {
-                    sor = matrixTomb[i + 1][j];
+    public static int[] primszamHelye(int[][] matrixTomb) {
+        int[] result = new int[2];
+
+        for (int i = 0; i < matrixTomb.length; i++) {
+            for (int j = 0; j < matrixTomb[i].length; j++) {
+                if (isPrime(matrixTomb[i][j])) {
+                    result[0] = i;
+                    result[1] = j;
+                    return result;
                 }
             }
 
         }
+        return null;
     }
 
     public static void main(String[] args) {
@@ -85,7 +108,7 @@ public class Dolgozat0301 {
         Kulonbseg(szamok);
         System.out.println(Primszam(szamok) ? "Van prímszám" : "Nincs prímszám");
         //primszamHelye(szamok);
-        
+
     }
 
 }
