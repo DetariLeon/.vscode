@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container" style="width: 50%;">
+
+        <div class="row justify-content-center">
+            <h1 style="text-align:center;">Útíköltség elszámolás</h1>
+            <h2 style="font-size:x-large;">Személyes adatok</h2>
+            <form>
+                <div class="form-group">
+                    <label for="Name"></label>
+                    <input type="text" class="form-control" id="Nev" placeholder="Név" name="">
+                </div>
+                <div class="form-group">
+                    <label for="Varos"></label>
+                    <input type="text" class="form-control" id="Varos" placeholder="Város" name="">
+                </div><br><br>
+                <h2 style="font-size:x-large;">Gépjármű- és üzemanyagadatok</h2>
+
+                <div class="form-group">
+                    <label for="GépTipusa"></label>
+                    <input type="text" class="form-control" id="GépTipusa" placeholder="Gépjármű gyártmánya, típusa" name="">
+                </div><br>
+
+                <div class="form-group">
+                    <select name="Üzemanyag" class="form-control" id="uzemanyag" placeholder="Üzemanyag fajtái" name="">
+                    <option selected>Válasszon...</option>
+                    <option value="Benzin">Benzin</option>
+                    <option value="Gazolaj">Gázolaj</option>
+                  </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <select name="fogyasztas" class="form-control" id="fogyasztas" placeholder="Fogyasztás" name="">
+                    <option selected>Válasszon...</option>
+                    <option value="1">1000 cm3-ig 7,6 l/100km</option>
+                    <option value="2">1001-1500 cm3 között 8,6 l/100km</option>
+                    <option value="3">1501-2000 cm3 között 9,5 l/100km</option>
+                    <option value="4">2001-3000 cm3 között 11,4 l/100km</option>
+                    <option value="5">3001 cm3 fölött 13,3 l/100km</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Datum"></label>
+                    <input type="Date" class="form-control" id="Datum" placeholder="Utazás dátuma" name="">
+                </div>
+                <div class="form-group">
+                    <label for="uzemagyagAr"></label>
+                    <input type="text" class="form-control" id="uzemagyagAr" placeholder="Üzemagyag egységára" name="" disabled onclick="uzemanyagAr()">
+                </div><br>
+
+                <h2 style="font-size:x-large;">A megtett út adatai</h2>
+                <div class="form-group">
+                    <label for="start"></label>
+                    <input type="text" class="form-control" id="start" placeholder="Kiindulási hely" name="">
+                </div>
+                <div class="form-group">
+                    <label for="finish"></label>
+                    <input type="text" class="form-control" id="finish" placeholder="Úticél" name="">
+                </div>
+                <div class="form-group">
+                    <label for="tavolsag"></label>
+                    <input type="text" class="form-control" id="tavolsag" placeholder="Összes megtett távolság" name="">
+                </div><br>
+                <button type="button" class="btn btn-primary" onclick="szamol()">Ellenőrzés és számítás</button>
+                <div class="form-group">
+                    <label for="finish"></label>
+                    <input type="text" class="form-control" id="utikoltseg" placeholder="Úti költségek: " name="" disabled>
+                    <input type="text" class="form-control" id="amortizacio" placeholder="Amortizáció:" name="" disabled>
+                    <input type="text" class="form-control" id="osszkoltseg" placeholder="Összessen elszámolandó költég:" name="" disabled>
+                </div><br>
+                <button type="button" class="btn btn-primary" onclick="ures()" disabled>Nyomtatás</button>
+            </form>
+        </div>
+        <script>
+            function ures() {
+                let urese =
+                    String(document.getElementById('ures').value)
+                if (urese == "" || urese == "Válasszon...") {
+                    alert("Nem lehet üres")
+                }
+            }
+
+            function uzemanyagAr() {
+                var user = document.getElementById("user").value
+                var benzin = document.getElementById("Benzin").value
+                var gazolaj = document.getElementById("Gazolaj").value
+                if (user == benzin) {
+                    document.getElementById("Benzin").innerHTML = "605 Ft/l"
+                } else if (user == gazolaj) {
+                    document.getElementById("Gazolaj").innerHTML = "623 Ft/l"
+                }
+            }
+
+            function datum() {
+                var kezdes = document.getElementById("kezdes").value
+                var startdate = new Date(kezdes);
+                var befejezes = document.getElementById("befejezes").value
+                var endate = new Date(befejezes);
+                if (endate > startdate) {
+                    document.getElementById("pesemeny").innerHTML = ("Az esemény befejező napja nem lehet a mai napnál korábban")
+                } else {
+                    document.getElementById("pesemeny").innerHTML = ("Jó dátum")
+                }
+            }
+
+            function koltsegek() {
+                const utikoltsegek = document.getElementById("utikoltseg").value
+                const uzemagyagAr = document.getElementById("uzemagyagAr").value
+                const fogyasztas = document.getElementById("fogyasztas").value
+                const tavolsag = document.getElementById("tavolsag").value
+                utikoltsegek = uzemagyagAr * fogyasztas * tavolsag / 100;
+
+            }
+        </script>
+</body>
+
+</html>
