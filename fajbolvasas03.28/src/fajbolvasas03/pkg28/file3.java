@@ -13,35 +13,42 @@ import java.io.RandomAccessFile;
  * @author user3
  */
 public class file3 {
-    public static void main(String[] args) {
-    RandomAccessFile raf;
+
+     public static void main(String[] args) {
+       
+        RandomAccessFile raf;
         String sor;
-        int[] szamok = new int[5];
-
-        int i, adatlength = 0;
-        try {
-            raf = new RandomAccessFile("adat3.txt", "r");
-            int db = 0;
-            adatlength = Integer.valueOf(raf.readLine());
+        int[][] szamok1 = new int[5][4];
+       
+        try{
+            raf = new RandomAccessFile("adat3.txt","r");
+            int i = 0;
+            String[] seged = null;
             sor = raf.readLine();
-
+            
+            
             while (sor != null) {
-                szamok[db] = Integer.valueOf(sor);
-                db++;
+                seged = sor.split(" ");
+                for(int j = 0; j < 4; j++){
+                    szamok1[i][j] = Integer.parseInt(seged[j]);                  
+                }
+                i++;
                 sor = raf.readLine();
             }
-
-            raf.close();
-
-        } catch (IOException e) {
+        }
+        catch(IOException e)
+        {
             System.err.println("HIBA");
         }
-        for (i = 0; i < szamok.length; i++) {
-            System.out.println(szamok[i] + " ");
-
+       
+       
+        for (int i = 0; i < szamok1.length; i++) {
+            for (int j = 0; j < szamok1[i].length; j++){
+                System.out.print(szamok1[i][j]+" ");
+            }
+            System.out.println("");
         }
         
-
+            
     }
-
 }
