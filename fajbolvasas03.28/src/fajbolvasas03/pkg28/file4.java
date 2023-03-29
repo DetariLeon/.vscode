@@ -20,7 +20,6 @@ public class file4 {
         RandomAccessFile raf;
         String sor;
         String[] nevek = new String[5];
-        int osszeg = 0;
         ArrayList<Integer> szamok = new ArrayList<Integer>();
         try {
             raf = new RandomAccessFile("adat1.txt", "r");
