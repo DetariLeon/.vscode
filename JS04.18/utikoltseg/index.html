@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <script src="Bootstrap/bootstrap.min.js"></script>
+    <title>Útiköltég számolás</title>
+    <script>
+        function fuelType() {
+            if (document.getElementById("ChooseFuelType").value == "1") {
+                document.getElementById("price").value = "605"
+            } else if (document.getElementById("ChooseFuelType").value == "2") {
+                document.getElementById("price").value = "623"
+            } else {
+                document.getElementById("price").value = null
+            }
+
+        }
+
+        function travelCost() {
+            let cost = document.getElementById("chooseNorm").value /
+                100 *
+                document.getElementById("price").value *
+                document.getElementById("tavolsag").value
+            document.getElementById("utikoltseg").value = cost
+
+
+            amortization = document.getElementById("tavolsag").value * 15
+            document.getElementById("amortizacio").value = amortization
+
+
+            osszkoltseg = amortization + cost
+            document.getElementById("osszkoltseg").value = osszkoltseg
+
+            document.getElementById("nyomtat").classList.remove("disabled")
+        }
+
+        winow.onload = function() {
+            let today = new Date()
+            let strToday = today.toISOString()
+            let strTodayArray = strToday.split("T")
+            document.getElementById("Datum").setAttribute("max", strTodayArray[0])
+
+        }
+    </script>
+</head>
+<!--Commment-->
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <form>
+                <h1 class="mt-3 text-center">Útiköltség elszámolás</h1>
+                <h3>Személyes adatok</h3>
+                <div class="form-group">
+                    <label for="name" class="form-label">Név</label>
+                    <input type="text" id="name" class="form-control" placeholder="Név" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="city" class="form-label">Város</label>
+                    <input type="text" id="city" class="form-control" placeholder="Város" required>
+                </div>
+
+                <h3 class="mb-3">Gépjármű- és üzemanyagadatok</h3>
+                <div class="form-group">
+                    <label for="car" class="form-label">Gépjármű gyártmánya, típusa</label>
+                    <input type="text" id="car" class="form-control" placeholder="Gépjármű gyártmánya, típusa" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="ChooseFuelType">Üzemanyag típusa</label>
+                    <select class="form-control" id="ChooseFuelType" onchange="fuelType()" required>
+                    <option value="0">Válasszon...</option>
+                    <option value="1">Benzin</option>
+                    <option value="2">Gázolaj</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="chooseNorm">Fogyasztási norma</label>
+                    <select class="form-control" id="chooseNorm">
+                    <option value="0">Válasszon...</option>
+                    <option value="7.6">1000 cm3-ig 7,6 l/100km</option>
+                    <option value="8.6">1001-1500 cm3 között 8,6 l/100km</option>
+                    <option value="9.5">1501-2000 cm3 között 9,5 l/100km</option>
+                    <option value="11.4">2001-3000 cm3 között 11,4 l/100km</option>
+                    <option value="13.3">3001 cm3 fölött 13,3 l/100km</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="Datum">Utazás dátuma</label>
+                    <input type="date" class="form-control" id="Datum" required max="2023-04-18">
+                </div>
+                <div class="form-group">
+                    <label for="price">Üzemagyag egységára</label>
+                    <input type="text" class="form-control" id="price" placeholder="Üzemagyag egységára" disabled>
+
+                    <h3 class="mb-3">A megtett út adatai</h3>
+
+                    <div class="form-group">
+                        <label for="start">Kiindulási hely</label>
+                        <input type="text" class="form-control" id="start" placeholder="Kiindulási hely" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="stop">Úticél</label>
+                        <input type="text" class="form-control" id="finish" placeholder="Úticél" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="km">Megtett távolság</label>
+                        <input type="number" class="form-control" id="tavolsag" placeholder="Összes megtett távolság" required>
+                    </div>
+                    <button type="button" class="btn btn-primary mb-3 mt-3" onclick="travelCost()">Ellenőrzés és számítás</button>
+                    <div class="mb-3">
+                        <input type="text" class="form-control mb-1" id="utikoltseg" placeholder="Úti költségek: Ft" disabled>
+                        <input type="text" class="form-control mb-1" id="amortizacio" placeholder="Amortizáció: Ft" disabled>
+                        <input type="text" class="form-control mb-1" id="osszkoltseg" placeholder="Összessen elszámolandó költég: Ft" disabled>
+                    </div>
+                    <button class="btn btn-primary mb-3 disabled" id="nyomtat">Nyomtatás</button>
+
+
+
+
+
+            </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
