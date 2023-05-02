@@ -5,10 +5,224 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <script src="Bootstrap/bootstrap.min.js"></script>
     <title>Étterem</title>
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
+    <script>
+        function kosar(id) {
+            let ar = parseInt(document.getElementById("ossz").textContent.split(' ')[1])
+            switch (parseInt(id)) {
+                case 1:
+                    ar += 1000;
+                    break;
+                case 2:
+                    ar += 1500;
+                    break;
+                case 3:
+                    ar += 800;
+                    break;
+                case 4:
+                    ar += 2000;
+                    break;
+                case 5:
+                    ar += 1700;
+                    break;
+                case 6:
+                    ar += 6969;
+                    break;
+                default:
+                    break;
+            }
+            document.getElementById("ossz").innerHTML = ("Összesen: " + ar + " Ft")
+            if (ar > 0) {
+                document.getElementById("Send-order").disabled = false
+            } else {
+                document.getElementById("Send-order").disabled = true
+            }
+        }
+
+        function ellenorzes() {
+            var nev = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var hiba = "";
+
+            if (nev == "") {
+                hiba += "Kérjük, adja meg a nevét!\n";
+            }
+            if (email == "") {
+                hiba += "Kérjük, adja meg az e-mail címét!\n";
+            }
+
+            if (hiba != "") {
+                alert(hiba);
+            } else {
+                alert("Felvettük a rendelését!");
+            }
+        }
+    </script>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Étterem</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Menü</a>
+                    <a class="nav-link" href="#">Rendelések</a>
+                    <a class="nav-link" href="#">Kosár</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <H2 class="mt-3">Étterem menü</H2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/300/200?random=2">
+
+                            <h5 class="mt-3">Hamburger</h5>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p style="font-size: 90%;">Ár : 1000 Ft</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary mb-3" id="Cart-hamburger" onclick="kosar(1)">Kosárba</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/300/200?random=3">
+
+                            <h5 class="mt-3">Pizza</h5>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p style="font-size: 90%;">Ár : 1500 Ft</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary mb-3" id="Cart-pizza" onclick="kosar(2)">Kosárba</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/300/200?random=1">
+
+                            <h5 class="mt-3">Saláta</h5>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p style="font-size: 90%;">Ár : 800 Ft</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary mb-3" id="Cart-salad" onclick="kosar(3)">Kosárba</button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mt-3" style="width: 18rem;">
+                            <img src="https://picsum.photos/300/200?random=4">
+
+                            <h5 class="mt-3">Rántott hús</h5>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p style="font-size: 90%;">Ár : 2000 Ft</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary mb-3" id="Cart-meat" onclick="kosar(4)">Kosárba</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mt-3" style="width: 18rem;">
+                            <img src="https://picsum.photos/300/200?random=5">
+
+                            <h5 class="mt-3">Marha</h5>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p style="font-size: 90%;">Ár : 1700 Ft</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary mb-3" id="Cart-beef" onclick="kosar(5)">Kosárba</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mt-3" style="width: 18rem;">
+                            <img src="https://picsum.photos/300/200?random=6">
+
+                            <h5 class="mt-3">Kukorica</h5>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p style="font-size: 90%;">Ár : 6969 Ft</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary mb-3" id="Cart-corn" onclick="kosar(6)">Kosárba</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Kosár</h2>
+                        <p id="ossz">Összessen: 0 Ft</p>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="start">Név</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="start">E-mail cím:</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <button type="button" class="btn btn-primary mt-3 mb-3" id="Send-order" disabled onclick="ellenorzes()">Rendelés elküldése</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
