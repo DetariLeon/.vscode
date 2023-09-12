@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const konyv = []
+        function addBook() {
+
+            const konyvtar = {
+                cim,
+                szerzo,
+                kiadasEv
+            };
+
+            let cimInput = document.getElementById("cim").value
+            let szerzoInput = document.getElementById("szerzo").value
+            let kiadasEvInput = document.getElementById("kiadasEv").value
+
+            konyvtar.cim = cimInput
+            konyvtar.szerzo = szerzoInput
+            konyvtar.kiadasEv = kiadasEvInput
+
+            konyv.push(konyvtar)
+            clearForm()
+
+
+
+            var sor = document.createElement('li')
+            sor.classList.add('list-group-item')
+
+            sor.classList.add('books')
+            sor.innerText = cimInput + " " + szerzoInput + " " + kiadasEvInput
+
+            document.getElementById("osszegzes").appendChild(sor)
+
+
+
+        }
+        function clearForm() {
+            document.getElementById("cim").value = null;
+            document.getElementById("szerzo").value = null;
+            document.getElementById("kiadasEv").value = null;
+        }
+        function searchBooks() {
+            let sor = document.getElementById('search').value
+            sor = sor.toLowerCase();
+            let x = document.getElementsByClassName('books');
+
+            for (i = 0; i < x.length; i++) {
+                if (!x[i].innerHTML.toLowerCase().includes(sor)) {
+                    x[i].style.display = "none";
+                }
+                else {
+                    x[i].style.display = "list-item";
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+    <title>Könyvlista</title>
+</head>
+
+
+
+<body>
+    <div class="container" style="width: 60%;">
+        <div class="form-group">
+            <div class="input-group mb-1 mt-1" style="width:30%">
+                <input type="text" class="form-control" id="search" placeholder="Keresés">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="searchBooks()">Keres</button>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="row justify-content-center">
+                    <h1 class="card-title text-center">Könyvlista</h1>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="cim" placeholder="Cím" required>
+                        <input type="text" class="form-control" id="szerzo" placeholder="Szerző" required>
+                        <input type="number" class="form-control" id="kiadasEv" placeholder="Kiadási év" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button"
+                                onclick="addBook()">Hozzáadás</button>
+                        </div>
+                    </div>
+                    <ul id="osszegzes" class="list-group"></ul>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>

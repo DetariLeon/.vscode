@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        const szamlak = []
+        var minOsszegValue
+        var maxOsszegValue
+
+        function szamlahozzad() {
+            const szamla = {
+                cimzett,
+                datum,
+                osszeg
+            };
+
+            let cimzettInput = document.getElementById("cimzett").value
+            let datumInput = document.getElementById("datum").value
+            let osszegInput = document.getElementById("osszeg").value
+
+            szamla.cimzett = cimzettInput
+            szamla.datum = datumInput
+            szamla.osszeg = osszegInput
+
+            szamlak.push(szamla)
+
+
+
+            var sor = document.createElement('li')
+            sor.classList.add('list-group-item')
+            sor.innerText = cimzettInput + " " + datumInput + " " + osszegInput
+        
+            document.getElementById("osszegzes").appendChild(sor)
+
+         
+            teljesOsszeg = document.getElementById("teljesOsszeg")
+            atlagOsszeg = document.getElementById("atlagOsszeg")
+
+            let teljesOsszegValue = 0
+
+            for (let i = 0; i < szamlak.length; i++) {
+                teljesOsszegValue += parseInt(szamlak[i].osszeg)
+            }
+            let atlagOsszegValue = teljesOsszegValue / szamlak.length
+
+            teljesOsszeg.innerHTML = "Összeg: " + teljesOsszegValue
+            atlagOsszeg.innerHTML = "Átlag: " + atlagOsszegValue
+
+          
+            var minOsszeg = document.getElementById("minOsszeg")
+            var maxOsszeg = document.getElementById("maxOsszeg")
+
+            if (szamlak.length == 1) {
+                minOsszegValue = szamla.osszeg
+                maxOsszegValue = szamla.osszeg
+                document.getElementById("minOsszeg").innerHTML = "Legkisebb összeg: " + minOsszegValue
+                document.getElementById("maxOsszeg").innerHTML = "Legnagyobb összeg: " + maxOsszegValue
+            }
+
+            if (minOsszegValue > parseInt(szamla.osszeg)) {
+                minOsszegValue = szamla.osszeg
+                minOsszeg.innerHTML = "Legkisebb összeg: " + minOsszegValue
+            }
+            if (maxOsszegValue < parseInt(szamla.osszeg)) {
+                maxOsszegValue = szamla.osszeg
+                maxOsszeg.innerHTML = "Legnagyobb összeg: " + maxOsszegValue
+            }
+
+        }
+    </script>
+    <title>Számlázó</title>
+</head>
+
+
+
+    <body>
+        <div class="container" style="width: 60%;">
+            <div class="form-group">
+                <div class="form-control">
+                    <div class="row justify-content-center">
+                        <h1 class="card-title text-center">Számlázó</h1>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="cimzett" placeholder="Címzett">
+                            <input type="date" class="form-control" id="datum">
+                            <input type="number" class="form-control" id="osszeg" placeholder="Összeg">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    onclick="szamlahozzad()">Hozzáadás</button>
+                            </div>
+                        </div>
+
+                        <ul id="osszegzes" class="list-group" onclick="HideText()"></ul>
+
+
+
+                        <div class="container mt-3">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id="teljesOsszeg" class="alert border">Összeg: 0</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="atlagOsszeg" class="alert border">Átlag: 0</div>
+                                </div>
+                            </div>
+                            <div id="minOsszeg" class="alert border">Legkisebb összeg: 0 </div>
+                            <div id="maxOsszeg" class="alert border">Legnagyobb összeg: 0 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+</html>
