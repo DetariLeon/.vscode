@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const user = []
+        function addUsers() {
+
+            const adat = {
+                nev,
+                eletkor
+                
+            };
+
+            let nevInput = document.getElementById("nev").value
+            let eletkorInput = document.getElementById("eletkor").value
+            
+            
+            if (isNaN(eletkor) || eletkor < 0 || eletkor > 130) {
+                alert("Az életkor érvénytelen. Kérjük, adjon meg egy pozitív egész számot.");
+                return;
+            }
+            adat.nev = nevInput
+            adat.eletkor = eletkorInput
+            
+
+            user.push(adat)
+            
+
+
+
+            var sor = document.createElement('li')
+            sor.classList.add('list-group-item')
+
+            sor.innerText = nevInput + " " + eletkorInput 
+
+            document.getElementById("osszegzes").appendChild(sor)
+        }
+    </script>
+    <title>Könyvlista</title>
+</head>
+
+
+
+<body>
+    <div class="container" style="width: 60%;">
+        <div class="form-group">
+            <div class="input-group mb-1 mt-1" style="width:30%">
+                <input type="text" class="form-control" id="search" placeholder="Keresés">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="searchBooks()">Keres</button>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="row justify-content-center">
+                    <h1 class="card-title text-center">Felhasználó lista</h1>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="nev" placeholder="Név" required>
+                        <input type="number" class="form-control" id="eletkor" placeholder="Életkor" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button"
+                                onclick="addUsers()">Hozzáadás</button>
+                        </div>
+                    </div>
+                    <div class="input-group-append mb-3">
+                        <ul id="osszegzes" class="list-group"></ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>
