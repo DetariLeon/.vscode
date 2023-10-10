@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eemény figyelés anim</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            transition: transform 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boxId" class="box"></div><br>
+    <button id="startButton">Animáció inítása</button>
+
+
+    <script>
+        const box = document.getElementById("boxId")
+        const startButton = document.getElementById("startButton")
+
+        startButton.addEventListener("click", function () {
+            box.style.transform = "translateX(200px)"
+            //
+            box.addEventListener("transitionend", function(){
+                box.style.transform = "translateX(-0px)"
+            })
+        })
+    </script>
+</body>
+
+</html>
