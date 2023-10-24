@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="counter">0</h1>
+    <button onclick="novel()">Növel</button>
+    <button onclick="csokken()">Csökkent</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        let counterValue = 0;
+
+        function updateCounter() {
+            const counterElement = document.getElementById('counter');
+            counterElement.textContent = counterValue;
+        }
+
+        function novel() {
+            counterValue++;
+            updateCounter();
+        }
+
+        function csokken() {
+            counterValue--;
+            updateCounter();
+        }
+
+        function reset() {
+            counterValue = 0;
+            updateCounter();
+        }
+    </script>
+</body>
+
+</html>

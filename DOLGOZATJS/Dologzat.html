@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="width: 60%;">
+        <div class="form-group">
+            <div class="input-group mb-1 mt-1" style="width:30%">
+
+            </div>
+            <div class="form-control">
+                <div class="row justify-content-center">
+                    <h1 class="card-title text-center">Hozzászólások</h1>
+                    <div class="input-group mb-3">
+                        <textarea id="hozzaszolas" class="form-control" placeholder="Hozzászólás" required></textarea>
+
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button"
+                                onclick="addComment()">Hozzáadás</button>
+                        </div>
+                    </div>
+                </div>
+                <label for="nemRobot">Nem vagyok robot</label>
+                <input type="checkbox" id="nemRobot"><br>
+
+                <div class="input-group-append mb-3">
+                    <ul id="hozzadComm" class="list-group"></ul>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+        const Comment = [];
+
+        function addComment() {
+
+            var nemRobot = document.getElementById('nemRobot').checked;
+            var hozzaszolas = document.getElementById('hozzaszolas').value;
+            if (!nemRobot) {
+                alert("Kérlek jelöld be, hogy nem vagy robot!");
+                return;
+            }
+            const adat = {
+                hozzaszolas
+
+            };
+
+
+
+            let hozzaszolasInput = document.getElementById("hozzaszolas").value
+            adat.hozzaszolas = hozzaszolasInput;
+            Comment.push(adat)
+
+
+
+            var now = new Date();
+
+            var sor = document.createElement('li')
+            sor.classList.add('list-group-item')
+
+            sor.innerText = dateString + " " + hozzaszolasInput
+
+            document.getElementById("hozzadComm").appendChild(sor)
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

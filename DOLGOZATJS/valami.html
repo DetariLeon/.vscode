@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hozzászólások</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            .comments {
+                background-color: #f5f5f5;
+                border-radius: 10px;
+                padding: 10px;
+            }
+            .comment {
+                margin-bottom: 10px;
+                padding: 10px;
+                background-color: white;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hozzászólások</h1>
+        <div class="comments" id="comments"></div>
+        <form id="commentForm">
+            <textarea id="paragraphText" rows="4" cols="50"></textarea><br>
+            <label for="notARobot">Nem vagyok robot</label>
+            <input type="checkbox" id="notARobot"><br>
+            <input type="submit" value="Hozzáadás">
+        </form>
+    
+        <script>
+            document.getElementById('commentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var notARobot = document.getElementById('notARobot').checked;
+                if (notARobot) {
+                    var paragraphText = document.getElementById('paragraphText').value;
+                    if (paragraphText.trim() !== '') {
+                        var now = new Date();
+                        var dateString = now.toISOString().slice(0,19).replace("T", " ");
+                        var commentText = dateString + ": " + paragraphText;
+                        var commentsContainer = document.getElementById('comments');
+                        var commentElement = document.createElement('div');
+                        commentElement.classList.add('comment');
+                        commentElement.textContent = commentText;
+                        commentsContainer.appendChild(commentElement);
+                        document.getElementById('paragraphText').value = '';
+                    } else {
+                        alert('Kérlek írj valamit a hozzászólás mezőbe!');
+                    }
+                } else {
+                    alert('Kérlek jelöld be, hogy nem vagy robot!');
+                }
+            });
+        </script>
+    </body>
+    </html>
+    
