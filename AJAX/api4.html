@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <title>időjárás</title>
+</head>
+
+
+
+        <div id="data"></div>
+    
+
+    <script>
+
+
+        var apiUrl = 'https://jsonplaceholder.typicode.com/users/1';
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', apiUrl, true);
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {                                
+                var user = JSON.parse(xhr.responseText)
+                document.getElementById('data').innerHTML= user.name +" " +"<br>"+ user.email +"<br>"+ user.address.street+", "+user.address.suite +", "+ user.address.city +", "+ user.address.zipcode ;
+            } else {
+                document.getElementById('data').textContent = 'Nem sikerült lekérni';
+            }
+        }
+        xhr.send();
+
+    </script>
+</body>
+
+</html>

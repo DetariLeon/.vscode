@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API lekérés</title>
+</head>
+
+<body>
+
+    <div id="apiData"></div>
+
+    <script>
+        var apiUrl = 'https://nameday.abalin.net/api/V1/today';
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', apiUrl, true);
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                var apiData = JSON.parse(xhr.responseText);
+                var nameday = apiData.nameday;
+                var language = apiData.language
+
+
+                var namemonthData = 'Day: ' + apiData.day + '\nMonth: ' + apiData.month + '\n';
+
+                for (language in nameday) {
+                    namemonthData += language + ': ' + nameday[language].replace(/, /g, ',\n ') + '\n';
+                }
+
+                document.getElementById('apiData').textContent = namemonthData
+            } else {
+                document.getElementById('apiData').textContent = 'Nem sikerült lekérni a nevet. ';
+            }
+        };
+
+        xhr.send();
+
+
+
+    </script>
+
+
+</body>
+
+</html>

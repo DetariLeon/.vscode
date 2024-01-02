@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <title>időjárás</title>
+</head>
+
+<body class="text-center">
+    <h1>Személy lekérés</h1>
+    <button class="btn btn-primary" onclick="randomUserXhr()">Lekérés</button>
+    <div id="person"></div>
+    <img id="dog" width="20%" height="20%">
+
+    <script>
+        const dogUrl = "https://images.dog.ceo/breeds/entlebucher/n02108000_3594.jpg";
+        var ujXhr = new XMLHttpRequest();
+        ujXhr.open('GET', dogUrl, true);
+
+        ujXhr.onload = function () {
+            if (ujXhr.status === 200) {
+                document.getElementById('dog').src = dogUrl;
+            } else {
+                document.getElementById('dog').textContent = "Nem sikerült betölteni a képet.";
+            }
+        }
+
+        ujXhr.send();
+
+
+        const randomUserUrl = "https://official-joke-api.appspot.com/random_joke";
+        const randomUserXhr = new XMLHttpRequest();
+        randomUserXhr.open("GET", randomUserUrl, true);
+
+        randomUserXhr.onload = function () {
+            if (randomUserXhr.status === 200) {
+                const userData = JSON.parse(randomUserXhr.responseText);
+                document.getElementById('person').textContent = JSON.stringify(userData, null, 2);
+            } else {
+                document.getElementById('person').textContent = "Nem sikerült betölteni az adatokat: " + randomUserXhr.status;
+            }
+        };
+
+        randomUserXhr.send();
+    </script>
+
+    </script>
+</body>
+
+</html>
